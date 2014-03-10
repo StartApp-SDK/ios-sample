@@ -22,20 +22,20 @@ typedef enum {
 } STAAdOrigin;
 
 @interface STABannerView : UIView <UIWebViewDelegate>
+    - (id) initWithSize:(STABannerSize) size origin:(CGPoint) origin withView: (UIView*) view withDelegate:(id <STABannerDelegagteProtocol> ) bannerDelegate;
+    - (id) initWithSize:(STABannerSize) size autoOrigin:(STAAdOrigin) origin withView: (UIView*) view withDelegate:(id <STABannerDelegagteProtocol> ) bannerDelegate;
 
-- (id) initWithIds:(NSString *) applicationId publisherId:(NSString *) publisherId size:(STABannerSize) size origin:(CGPoint) origin withView: (UIView*) view
-      withDelegate:(id <STABannerDelegagteProtocol> ) bannerDelegate;
+    - (void)setSTABannerSize:(STABannerSize) size;
 
-- (id) initWithIds:(NSString *) applicationId publisherId:(NSString *) publisherId size:(STABannerSize) size autoOrigin:(STAAdOrigin) origin withView: (UIView*) view
-      withDelegate:(id <STABannerDelegagteProtocol> ) bannerDelegate;
+    - (void)setOrigin:(CGPoint) origin;
 
-- (void)setSTABannerSize:(STABannerSize) size;
+    - (void)setSTAAutoOrigin:(STAAdOrigin)origin;
 
-- (void)setOrigin:(CGPoint) origin;
+    - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation;
 
-- (void)setSTAAutoOrigin:(STAAdOrigin)origin;
+    -(void)addSTABannerToCell:(UITableViewCell *)cell withIndexPath:(NSIndexPath *)indexPath atIntexPathSection:(int)section repeatEach:(int)each;
+    -(void)addSTABannerToCell:(UITableViewCell *)cell withIndexPath:(NSIndexPath *)indexPath atIntexPathSection:(int)section;
 
-- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation;
-
-
+    -(void)addSTABannerToCell:(UITableViewCell *)cell withIndexPath:(NSIndexPath *)indexPath atIntexPathRow:(int)row repeatEach:(int)each;
+    -(void)addSTABannerToCell:(UITableViewCell *)cell withIndexPath:(NSIndexPath *)indexPath atIntexPathRow:(int)row;
 @end

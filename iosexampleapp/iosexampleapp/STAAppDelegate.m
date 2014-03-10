@@ -7,12 +7,14 @@
 //
 
 #import "STAAppDelegate.h"
+#import "STAStartAppAd.h"
 
 @implementation STAAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    // StartApp static init for your applicationID & developerID
+    [STAStartAppAd initWithAppId:@"ApplicationID" developerId:@"DeveloperID"];
     return YES;
 }
 							

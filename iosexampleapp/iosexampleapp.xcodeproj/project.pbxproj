@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		884256FE18CDE6F100BB7521 /* libStartAppAdSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 884256F918CDE6F100BB7521 /* libStartAppAdSDK.a */; };
+		884256FF18CDE6F100BB7521 /* StartAppAdSDK-resources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 884256FC18CDE6F100BB7521 /* StartAppAdSDK-resources.bundle */; };
 		88F5AAC918B4AC560006D578 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88F5AAC818B4AC560006D578 /* Foundation.framework */; };
 		88F5AACB18B4AC560006D578 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88F5AACA18B4AC560006D578 /* CoreGraphics.framework */; };
 		88F5AACD18B4AC560006D578 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88F5AACC18B4AC560006D578 /* UIKit.framework */; };
@@ -21,8 +23,6 @@
 		88F5AAEC18B4AC560006D578 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88F5AAC818B4AC560006D578 /* Foundation.framework */; };
 		88F5AAED18B4AC560006D578 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88F5AACC18B4AC560006D578 /* UIKit.framework */; };
 		88F5AB0218B4B33F0006D578 /* startapp_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 88F5AB0118B4B33F0006D578 /* startapp_logo.png */; };
-		88F5AB0818B4B5A40006D578 /* libStartAppAdSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 88F5AB0318B4B5A40006D578 /* libStartAppAdSDK.a */; };
-		88F5AB0918B4B5A40006D578 /* StartAppAdSDK-resources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 88F5AB0618B4B5A40006D578 /* StartAppAdSDK-resources.bundle */; };
 		88F5AB0B18B4B5BD0006D578 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88F5AB0A18B4B5BD0006D578 /* CoreTelephony.framework */; };
 		88F5AB0D18B4B5C50006D578 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88F5AB0C18B4B5C50006D578 /* SystemConfiguration.framework */; };
 		88F5AB0F18B4B5D20006D578 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88F5AB0E18B4B5D20006D578 /* StoreKit.framework */; };
@@ -40,6 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		884256F918CDE6F100BB7521 /* libStartAppAdSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libStartAppAdSDK.a; sourceTree = "<group>"; };
+		884256FA18CDE6F100BB7521 /* STABannerSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STABannerSize.h; sourceTree = "<group>"; };
+		884256FB18CDE6F100BB7521 /* STABannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STABannerView.h; sourceTree = "<group>"; };
+		884256FC18CDE6F100BB7521 /* StartAppAdSDK-resources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = "StartAppAdSDK-resources.bundle"; sourceTree = "<group>"; };
+		884256FD18CDE6F100BB7521 /* STAStartAppAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STAStartAppAd.h; sourceTree = "<group>"; };
 		88F5AAC518B4AC560006D578 /* iosexampleapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosexampleapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88F5AAC818B4AC560006D578 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		88F5AACA18B4AC560006D578 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -58,11 +63,6 @@
 		88F5AAE918B4AC560006D578 /* iosexampleappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iosexampleappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		88F5AAEA18B4AC560006D578 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		88F5AB0118B4B33F0006D578 /* startapp_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = startapp_logo.png; sourceTree = "<group>"; };
-		88F5AB0318B4B5A40006D578 /* libStartAppAdSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libStartAppAdSDK.a; sourceTree = "<group>"; };
-		88F5AB0418B4B5A40006D578 /* STABannerSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STABannerSize.h; sourceTree = "<group>"; };
-		88F5AB0518B4B5A40006D578 /* STABannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STABannerView.h; sourceTree = "<group>"; };
-		88F5AB0618B4B5A40006D578 /* StartAppAdSDK-resources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = "StartAppAdSDK-resources.bundle"; sourceTree = "<group>"; };
-		88F5AB0718B4B5A40006D578 /* STAStartAppAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STAStartAppAd.h; sourceTree = "<group>"; };
 		88F5AB0A18B4B5BD0006D578 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		88F5AB0C18B4B5C50006D578 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		88F5AB0E18B4B5D20006D578 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
@@ -80,7 +80,7 @@
 				88F5AB0D18B4B5C50006D578 /* SystemConfiguration.framework in Frameworks */,
 				88F5AB0B18B4B5BD0006D578 /* CoreTelephony.framework in Frameworks */,
 				88F5AACD18B4AC560006D578 /* UIKit.framework in Frameworks */,
-				88F5AB0818B4B5A40006D578 /* libStartAppAdSDK.a in Frameworks */,
+				884256FE18CDE6F100BB7521 /* libStartAppAdSDK.a in Frameworks */,
 				88F5AAC918B4AC560006D578 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -101,11 +101,11 @@
 		88F5AABC18B4AC560006D578 = {
 			isa = PBXGroup;
 			children = (
-				88F5AB0318B4B5A40006D578 /* libStartAppAdSDK.a */,
-				88F5AB0418B4B5A40006D578 /* STABannerSize.h */,
-				88F5AB0518B4B5A40006D578 /* STABannerView.h */,
-				88F5AB0618B4B5A40006D578 /* StartAppAdSDK-resources.bundle */,
-				88F5AB0718B4B5A40006D578 /* STAStartAppAd.h */,
+				884256F918CDE6F100BB7521 /* libStartAppAdSDK.a */,
+				884256FA18CDE6F100BB7521 /* STABannerSize.h */,
+				884256FB18CDE6F100BB7521 /* STABannerView.h */,
+				884256FC18CDE6F100BB7521 /* StartAppAdSDK-resources.bundle */,
+				884256FD18CDE6F100BB7521 /* STAStartAppAd.h */,
 				88F5AACE18B4AC560006D578 /* iosexampleapp */,
 				88F5AAC718B4AC560006D578 /* Frameworks */,
 				88F5AAC618B4AC560006D578 /* Products */,
@@ -251,7 +251,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88F5AB0918B4B5A40006D578 /* StartAppAdSDK-resources.bundle in Resources */,
+				884256FF18CDE6F100BB7521 /* StartAppAdSDK-resources.bundle in Resources */,
 				88F5AADF18B4AC560006D578 /* Main_iPad.storyboard in Resources */,
 				88F5AAE418B4AC560006D578 /* Images.xcassets in Resources */,
 				88F5AADC18B4AC560006D578 /* Main_iPhone.storyboard in Resources */,
@@ -358,7 +358,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -392,7 +392,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

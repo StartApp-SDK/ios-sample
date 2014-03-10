@@ -22,8 +22,8 @@
      Init of the startapp interstitials
      NOTE: replace the ApplicationID and the PublisherID with your own IDs
      */
-    startAppAd_autoLoad = [[STAStartAppAd alloc] initWithAppId:@"ApplicationID" publisherId:@"PublisherID"];
-    startAppAd_loadShow = [[STAStartAppAd alloc] initWithAppId:@"ApplicationID" publisherId:@"PublisherID"];
+    startAppAd_autoLoad = [[STAStartAppAd alloc] init];
+    startAppAd_loadShow = [[STAStartAppAd alloc] init];
 }
 
 - (void) viewDidAppear:(BOOL)animated {
@@ -37,11 +37,9 @@
      NOTE: replace the ApplicationID and the PublisherID with your own IDs
      */
     if (startAppBanner_auto == nil) {
-        startAppBanner_auto = [[STABannerView alloc] initWithIds:@"ApplicationID"
-                                                    publisherId:@"PublisherID"
-                                                    size:STA_AutoAdSize
-                                                    autoOrigin:STAAdOrigin_Bottom
-                                                    withView:self.view withDelegate:nil];
+        startAppBanner_auto = [[STABannerView alloc] initWithSize:STA_AutoAdSize
+                                                     autoOrigin:STAAdOrigin_Bottom
+                                                     withView:self.view withDelegate:nil];
         [self.view addSubview:startAppBanner_auto];
     }
     
@@ -50,11 +48,9 @@
      NOTE: replace the ApplicationID and the PublisherID with your own IDs
      */
     if (startAppBanner_fixed == nil) {
-        startAppBanner_fixed = [[STABannerView alloc] initWithIds:@"ApplicationID"
-                                                      publisherId:@"PublisherID"
-                                                             size:STA_PortraitAdSize_320x50
-                                                           origin:CGPointMake(0,200)
-                                                         withView:self.view withDelegate:nil];
+        startAppBanner_fixed = [[STABannerView alloc] initWithSize:STA_PortraitAdSize_320x50
+                                                      origin:CGPointMake(0,200)
+                                                      withView:self.view withDelegate:nil];
         [self.view addSubview:startAppBanner_fixed];
     }
 }
