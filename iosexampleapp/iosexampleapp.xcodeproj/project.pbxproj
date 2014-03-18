@@ -409,10 +409,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iosexampleapp/iosexampleapp-Prefix.pch";
 				INFOPLIST_FILE = "iosexampleapp/iosexampleapp-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					/Users/Yarin/Documents/workspace/iosexampleapp,
-				);
+				LIBRARY_SEARCH_PATHS = "${SRCROOT}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -429,10 +426,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iosexampleapp/iosexampleapp-Prefix.pch";
 				INFOPLIST_FILE = "iosexampleapp/iosexampleapp-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					/Users/Yarin/Documents/workspace/iosexampleapp,
-				);
+				LIBRARY_SEARCH_PATHS = "${SRCROOT}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
