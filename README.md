@@ -1,4 +1,4 @@
-[StartApp][] iOS InApp SDK Example Project
+[StartApp][] iOS InApp SDK Example Project1
 ======================================
 
 *Updated to InApp SDK version 2.0.2*
