@@ -33,7 +33,7 @@
     [startAppAd_autoLoad loadAd];
     
     /*
-     load the StartApp auto position banner
+     load the StartApp auto position banner, banner size will be assigned automatically by  StartApp
      NOTE: replace the ApplicationID and the PublisherID with your own IDs
      */
     if (startAppBanner_auto == nil) {
