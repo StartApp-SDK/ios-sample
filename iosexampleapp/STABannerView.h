@@ -4,16 +4,18 @@
 //
 //  Created by StartApp on 11/13/13.
 //  Copyright (c) 2013 StartApp. All rights reserved.
-//
+//  SDK version 2.1.0
+
 
 #import <UIKit/UIKit.h>
 #import "STABannerSize.h"
 
+@class STABannerView;   // Forward decleration
 @protocol STABannerDelegagteProtocol <NSObject>
 @optional
-- (void) didDisplayBannerAd;
-- (void) failedLoadBannerAd:(NSError *)error;
-- (void) didClickBannerAd;
+- (void) didDisplayBannerAd:(STABannerView*)banner;
+- (void) failedLoadBannerAd:(STABannerView*)banner withError:(NSError *)error;
+- (void) didClickBannerAd:(STABannerView*)banner;
 @end
 
 typedef enum {
@@ -21,7 +23,10 @@ typedef enum {
     STAAdOrigin_Bottom = 2,
 } STAAdOrigin;
 
+
 @interface STABannerView : UIView <UIWebViewDelegate>
+
+
     - (id) initWithSize:(STABannerSize) size origin:(CGPoint) origin withView: (UIView*) view withDelegate:(id <STABannerDelegagteProtocol> ) bannerDelegate;
     - (id) initWithSize:(STABannerSize) size autoOrigin:(STAAdOrigin) origin withView: (UIView*) view withDelegate:(id <STABannerDelegagteProtocol> ) bannerDelegate;
 

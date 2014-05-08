@@ -7,14 +7,18 @@
 //
 
 #import "STAAppDelegate.h"
-#import "STAStartAppAd.h"
+#import "STAStartAppSDK.h"
 
 @implementation STAAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // StartApp static init for your applicationID & developerID
-    [STAStartAppAd initWithAppId:@"ApplicationID" developerId:@"DeveloperID"];
+    // initialize the SDK with your appID and devID
+    STAStartAppSDK* sdk = [STAStartAppSDK sharedInstance];
+    sdk.appID = @"your app Id";
+    sdk.devID = @"your developer id";
+    sdk.preferences = [STASDKPreferences prefrencesWithAge:22 andGender:STAGender_Male];
+
     return YES;
 }
 							

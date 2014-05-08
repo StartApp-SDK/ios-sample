@@ -40,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0848C36A191BB9EB00327AB5 /* STAAbstractAd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STAAbstractAd.h; sourceTree = "<group>"; };
+		0848C36B191BB9EB00327AB5 /* STAStartAppSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STAStartAppSDK.h; sourceTree = "<group>"; };
 		884256F918CDE6F100BB7521 /* libStartAppAdSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libStartAppAdSDK.a; sourceTree = "<group>"; };
 		884256FA18CDE6F100BB7521 /* STABannerSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STABannerSize.h; sourceTree = "<group>"; };
 		884256FB18CDE6F100BB7521 /* STABannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STABannerView.h; sourceTree = "<group>"; };
@@ -98,7 +100,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		88F5AABC18B4AC560006D578 = {
+		0848C36C191BB9F100327AB5 /* StartApp SDK */ = {
 			isa = PBXGroup;
 			children = (
 				884256F918CDE6F100BB7521 /* libStartAppAdSDK.a */,
@@ -106,6 +108,16 @@
 				884256FB18CDE6F100BB7521 /* STABannerView.h */,
 				884256FC18CDE6F100BB7521 /* StartAppAdSDK-resources.bundle */,
 				884256FD18CDE6F100BB7521 /* STAStartAppAd.h */,
+				0848C36A191BB9EB00327AB5 /* STAAbstractAd.h */,
+				0848C36B191BB9EB00327AB5 /* STAStartAppSDK.h */,
+			);
+			name = "StartApp SDK";
+			sourceTree = "<group>";
+		};
+		88F5AABC18B4AC560006D578 = {
+			isa = PBXGroup;
+			children = (
+				0848C36C191BB9F100327AB5 /* StartApp SDK */,
 				88F5AACE18B4AC560006D578 /* iosexampleapp */,
 				88F5AAC718B4AC560006D578 /* Frameworks */,
 				88F5AAC618B4AC560006D578 /* Products */,
@@ -216,7 +228,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = STA;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = StartApp;
 				TargetAttributes = {
 					88F5AAC418B4AC560006D578 = {
@@ -329,7 +341,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -369,7 +380,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -436,7 +446,6 @@
 		88F5AAFE18B4AC560006D578 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iosexampleapp.app/iosexampleapp";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -459,7 +468,6 @@
 		88F5AAFF18B4AC560006D578 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iosexampleapp.app/iosexampleapp";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",

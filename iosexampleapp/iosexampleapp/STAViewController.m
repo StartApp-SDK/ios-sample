@@ -95,7 +95,7 @@
 */
 
 // StartApp Ad loaded successfully
-- (void) didLoadAd
+- (void) didLoadAd:(STAAbstractAd*)ad;
 {
     NSLog(@"StartApp Ad had been loaded successfully");
     
@@ -104,19 +104,19 @@
 }
 
 // StartApp Ad failed to load
-- (void) failedLoadAd:(NSError *)error
+- (void) failedLoadAd:(STAAbstractAd*)ad withError:(NSError *)error;
 {
     NSLog(@"StartApp Ad had failed to load");
 }
 
 // StartApp Ad is being displayed
-- (void) didShowAd
+- (void) didShowAd:(STAAbstractAd*)ad;
 {
     NSLog(@"StartApp Ad is being displayed");
 }
 
 // StartApp Ad failed to display
-- (void) failedShowAd:(NSError *)error
+- (void) failedShowAd:(STAAbstractAd*)ad withError:(NSError *)error;
 {
     NSLog(@"StartApp Ad is failed to display");
 }
