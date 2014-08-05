@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		884256FE18CDE6F100BB7521 /* libStartAppAdSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 884256F918CDE6F100BB7521 /* libStartAppAdSDK.a */; };
-		884256FF18CDE6F100BB7521 /* StartAppAdSDK-resources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 884256FC18CDE6F100BB7521 /* StartAppAdSDK-resources.bundle */; };
+		50656FC21990B43600B9F30B /* StartApp.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 50656FC01990B43600B9F30B /* StartApp.bundle */; };
+		50656FC31990B43600B9F30B /* StartApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50656FC11990B43600B9F30B /* StartApp.framework */; };
 		88F5AAC918B4AC560006D578 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88F5AAC818B4AC560006D578 /* Foundation.framework */; };
 		88F5AACB18B4AC560006D578 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88F5AACA18B4AC560006D578 /* CoreGraphics.framework */; };
 		88F5AACD18B4AC560006D578 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88F5AACC18B4AC560006D578 /* UIKit.framework */; };
@@ -40,13 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0848C36A191BB9EB00327AB5 /* STAAbstractAd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STAAbstractAd.h; sourceTree = "<group>"; };
-		0848C36B191BB9EB00327AB5 /* STAStartAppSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STAStartAppSDK.h; sourceTree = "<group>"; };
-		884256F918CDE6F100BB7521 /* libStartAppAdSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libStartAppAdSDK.a; sourceTree = "<group>"; };
-		884256FA18CDE6F100BB7521 /* STABannerSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STABannerSize.h; sourceTree = "<group>"; };
-		884256FB18CDE6F100BB7521 /* STABannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STABannerView.h; sourceTree = "<group>"; };
-		884256FC18CDE6F100BB7521 /* StartAppAdSDK-resources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = "StartAppAdSDK-resources.bundle"; sourceTree = "<group>"; };
-		884256FD18CDE6F100BB7521 /* STAStartAppAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STAStartAppAd.h; sourceTree = "<group>"; };
+		50656FC01990B43600B9F30B /* StartApp.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = StartApp.bundle; sourceTree = "<group>"; };
+		50656FC11990B43600B9F30B /* StartApp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = StartApp.framework; sourceTree = "<group>"; };
 		88F5AAC518B4AC560006D578 /* iosexampleapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosexampleapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88F5AAC818B4AC560006D578 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		88F5AACA18B4AC560006D578 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -81,8 +76,8 @@
 				88F5AACB18B4AC560006D578 /* CoreGraphics.framework in Frameworks */,
 				88F5AB0D18B4B5C50006D578 /* SystemConfiguration.framework in Frameworks */,
 				88F5AB0B18B4B5BD0006D578 /* CoreTelephony.framework in Frameworks */,
+				50656FC31990B43600B9F30B /* StartApp.framework in Frameworks */,
 				88F5AACD18B4AC560006D578 /* UIKit.framework in Frameworks */,
-				884256FE18CDE6F100BB7521 /* libStartAppAdSDK.a in Frameworks */,
 				88F5AAC918B4AC560006D578 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -103,13 +98,8 @@
 		0848C36C191BB9F100327AB5 /* StartApp SDK */ = {
 			isa = PBXGroup;
 			children = (
-				884256F918CDE6F100BB7521 /* libStartAppAdSDK.a */,
-				884256FA18CDE6F100BB7521 /* STABannerSize.h */,
-				884256FB18CDE6F100BB7521 /* STABannerView.h */,
-				884256FC18CDE6F100BB7521 /* StartAppAdSDK-resources.bundle */,
-				884256FD18CDE6F100BB7521 /* STAStartAppAd.h */,
-				0848C36A191BB9EB00327AB5 /* STAAbstractAd.h */,
-				0848C36B191BB9EB00327AB5 /* STAStartAppSDK.h */,
+				50656FC01990B43600B9F30B /* StartApp.bundle */,
+				50656FC11990B43600B9F30B /* StartApp.framework */,
 			);
 			name = "StartApp SDK";
 			sourceTree = "<group>";
@@ -263,9 +253,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				884256FF18CDE6F100BB7521 /* StartAppAdSDK-resources.bundle in Resources */,
 				88F5AADF18B4AC560006D578 /* Main_iPad.storyboard in Resources */,
 				88F5AAE418B4AC560006D578 /* Images.xcassets in Resources */,
+				50656FC21990B43600B9F30B /* StartApp.bundle in Resources */,
 				88F5AADC18B4AC560006D578 /* Main_iPhone.storyboard in Resources */,
 				88F5AAD318B4AC560006D578 /* InfoPlist.strings in Resources */,
 				88F5AB0218B4B33F0006D578 /* startapp_logo.png in Resources */,
@@ -416,6 +406,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iosexampleapp/iosexampleapp-Prefix.pch";
 				INFOPLIST_FILE = "iosexampleapp/iosexampleapp-Info.plist";
@@ -433,6 +427,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iosexampleapp/iosexampleapp-Prefix.pch";
 				INFOPLIST_FILE = "iosexampleapp/iosexampleapp-Info.plist";

@@ -8,10 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-/* Import of StartApp SDK header files */
-#import "STAStartAppAd.h"
-#import "STABannerSize.h"
-#import "STABannerView.h"
+/* Import StartApp SDK framework */
+#import <StartApp/StartApp.h>
 
 /* Definition of the implementation of STADelegateProtocol */
 @interface STAViewController : UIViewController <STADelegateProtocol>

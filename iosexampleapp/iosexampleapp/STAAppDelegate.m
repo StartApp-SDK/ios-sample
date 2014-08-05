@@ -7,7 +7,9 @@
 //
 
 #import "STAAppDelegate.h"
-#import "STAStartAppSDK.h"
+
+/* Import StartApp SDK framework */
+#import <StartApp/StartApp.h>
 
 @implementation STAAppDelegate
 
@@ -19,6 +21,15 @@
     sdk.devID = @"your developer id";
     sdk.preferences = [STASDKPreferences prefrencesWithAge:22 andGender:STAGender_Male];
 
+    STASplashPreferences *splashPreferences = [[STASplashPreferences alloc] init];
+    splashPreferences.splashMode = STASplashModeTemplate;
+    splashPreferences.splashTemplateTheme = STASplashTemplateThemeOcean;
+    splashPreferences.splashLoadingIndicatorType = STASplashLoadingIndicatorTypeDots;
+    splashPreferences.splashTemplateIconImageName = @"StartAppIcon";
+    splashPreferences.splashTemplateAppName = @"StartApp Example App";
+
+    [sdk showSplashAdWithPreferences:splashPreferences];
+    
     return YES;
 }
 							
