@@ -66,6 +66,18 @@
     [super didRotateFromInterfaceOrientation:fromInterfaceOrientation ];
 }
 
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
+{
+    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
+}
+- (BOOL) shouldAutorotate{
+    return YES;
+}
+
+- (void)willTransitionToTraitCollection:(UITraitCollection *)newCollection withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
+    [super willTransitionToTraitCollection:newCollection withTransitionCoordinator:coordinator];
+}
+    
 #pragma mark ShowAd button click
 - (IBAction)btnShowAdClick:(id)sender
 {

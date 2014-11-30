@@ -2,9 +2,9 @@
 //  STASplashPreferences.h
 //  StartApp
 //
-//  Created by Nadav on 6/25/14.
+//  Created by StartApp on 6/25/14.
 //  Copyright (c) 2014 StartApp. All rights reserved.
-//
+//  SDK version 2.3.3
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>

@@ -4,7 +4,7 @@
 //
 //  Created by StartApp on 3/13/14.
 //  Copyright (c) 2014 StartApp. All rights reserved.
-//  SDK version 2.2.0
+//  SDK version 2.3.3
 
 #import <Foundation/Foundation.h>
 #import "STAStartAppAd.h"
@@ -45,9 +45,21 @@ typedef enum {
 - (void)showSplashAdWithPreferences:(STASplashPreferences *)splashPreferences;
 - (void)showSplashAdWithDelegate:(id<STADelegateProtocol>)delegate withPreferences:(STASplashPreferences *)splashPreferences;
 
+- (void)unitySDKInitialize;
+- (void)unityAppWillEnterForeground;
+- (void)unityAppDidEnterBackground;
+
+
 @property (readonly)  NSString* version;
 @property (readonly)  long buildNumber;
 
 @property (nonatomic)BOOL isUnityEnvironment;
+@property (nonatomic)BOOL isAdMobMediationEnvironment;
+@property (nonatomic)BOOL isMoPubMediationEnvironment;
+@property (nonatomic)BOOL isSwiftEnvironment;
+@property (nonatomic)int initTime;
+
+
+
 
 @end

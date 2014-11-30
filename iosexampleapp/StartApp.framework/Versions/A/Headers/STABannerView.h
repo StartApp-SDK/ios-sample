@@ -4,7 +4,7 @@
 //
 //  Created by StartApp on 11/13/13.
 //  Copyright (c) 2013 StartApp. All rights reserved.
-//  SDK version 2.2.0
+//  SDK version 2.3.3
 
 #import <UIKit/UIKit.h>
 #import "STABannerSize.h"
@@ -25,29 +25,27 @@ typedef enum {
 
 @interface STABannerView : UIView <UIWebViewDelegate>
 
-
-    - (id) initWithSize:(STABannerSize) size origin:(CGPoint) origin withView: (UIView*) view withDelegate:(id <STABannerDelegateProtocol> ) bannerDelegate;
-    - (id) initWithSize:(STABannerSize) size autoOrigin:(STAAdOrigin) origin withView: (UIView*) view withDelegate:(id <STABannerDelegateProtocol> ) bannerDelegate;
-
-    - (void)setSTABannerSize:(STABannerSize) size;
-
-    - (void)setOrigin:(CGPoint) origin;
-
-    - (void)setSTAAutoOrigin:(STAAdOrigin)origin;
-
-    - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation;
-
-    - (void)hideBanner;
-
-    - (void)showBanner;
-
-    - (BOOL)isVisible;
+- (id) initWithSize:(STABannerSize) size origin:(CGPoint) origin withView: (UIView*) view withDelegate:(id <STABannerDelegateProtocol> ) bannerDelegate;
+- (id) initWithSize:(STABannerSize) size autoOrigin:(STAAdOrigin) origin withView: (UIView*) view withDelegate:(id <STABannerDelegateProtocol> ) bannerDelegate;
 
 
+- (void)setSTABannerSize:(STABannerSize) size;
+- (void)setOrigin:(CGPoint) origin;
+- (void)setSTAAutoOrigin:(STAAdOrigin)origin;
 
-    -(void)addSTABannerToCell:(UITableViewCell *)cell withIndexPath:(NSIndexPath *)indexPath atIntexPathSection:(int)section repeatEach:(int)each;
-    -(void)addSTABannerToCell:(UITableViewCell *)cell withIndexPath:(NSIndexPath *)indexPath atIntexPathSection:(int)section;
 
-    -(void)addSTABannerToCell:(UITableViewCell *)cell withIndexPath:(NSIndexPath *)indexPath atIntexPathRow:(int)row repeatEach:(int)each;
-    -(void)addSTABannerToCell:(UITableViewCell *)cell withIndexPath:(NSIndexPath *)indexPath atIntexPathRow:(int)row;
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation;
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator;
+
+
+- (void)hideBanner;
+- (void)showBanner;
+- (BOOL)isVisible;
+
+
+-(void)addSTABannerToCell:(UITableViewCell *)cell withIndexPath:(NSIndexPath *)indexPath atIntexPathSection:(int)section repeatEach:(int)each;
+-(void)addSTABannerToCell:(UITableViewCell *)cell withIndexPath:(NSIndexPath *)indexPath atIntexPathSection:(int)section;
+-(void)addSTABannerToCell:(UITableViewCell *)cell withIndexPath:(NSIndexPath *)indexPath atIntexPathRow:(int)row repeatEach:(int)each;
+-(void)addSTABannerToCell:(UITableViewCell *)cell withIndexPath:(NSIndexPath *)indexPath atIntexPathRow:(int)row;
+
 @end

@@ -3,12 +3,16 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "logo_startapp_400_square.png"
+      "filename" : "icon-1.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "logo_startapp_400_square@2x.png"
+      "filename" : "icon-1@2x.png"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
     }
   ],
   "info" : {
