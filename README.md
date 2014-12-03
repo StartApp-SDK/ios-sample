@@ -1,7 +1,7 @@
 [StartApp][] iOS InApp SDK Example Project
 ======================================
 
-*Updated to InApp SDK version 2.2.0*
+*Updated to InApp SDK version 2.3.3*
 
 This iOS application project provides an example of the [StartApp][] InApp SDK integration.
 
@@ -16,6 +16,7 @@ This ad is loaded upon clicking the 'Load & Show' button, and displayed when the
 * Return ad when returning to the application after a certain period of time of it being in the background.
 * Banner with an automatic positioning at the bottom of the screen.
 * Banner with a fixed position and size.
+* Native ad example.
 
 When integrating the SDK with your application, please make sure to use the latest SDK version, which can be downloaded from our [developers portal](https://developers.startapp.com).  
 Please also follow the integration manual which comes with the SDK.  
