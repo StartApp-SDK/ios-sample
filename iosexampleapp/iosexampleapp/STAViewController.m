@@ -30,7 +30,7 @@
     [super viewDidAppear:animated];
     
     // loading the StartApp Ad
-    [startAppAd_autoLoad loadAd];
+    [startAppAd_autoLoad loadAdWithDelegate:self];
     
     /*
      load the StartApp auto position banner, banner size will be assigned automatically by  StartApp
@@ -48,9 +48,17 @@
      NOTE: replace the ApplicationID and the PublisherID with your own IDs
      */
     if (startAppBanner_fixed == nil) {
-        startAppBanner_fixed = [[STABannerView alloc] initWithSize:STA_PortraitAdSize_320x50
-                                                      origin:CGPointMake(0,200)
-                                                      withView:self.view withDelegate:nil];
+        if ( UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad )
+        {
+            startAppBanner_fixed = [[STABannerView alloc] initWithSize:STA_PortraitAdSize_768x90
+                                                                origin:CGPointMake(0,300)
+                                                              withView:self.view withDelegate:nil];
+        } else {
+            startAppBanner_fixed = [[STABannerView alloc] initWithSize:STA_PortraitAdSize_320x50
+                                                                origin:CGPointMake(0,200)
+                                                              withView:self.view withDelegate:nil];
+        }
+
         [self.view addSubview:startAppBanner_fixed];
     }
 }
@@ -66,18 +74,16 @@
     [super didRotateFromInterfaceOrientation:fromInterfaceOrientation ];
 }
 
-- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
+- (NSUInteger)supportedInterfaceOrientations
 {
-    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
-}
-- (BOOL) shouldAutorotate{
-    return YES;
+    return UIInterfaceOrientationMaskAll;
 }
 
-- (void)willTransitionToTraitCollection:(UITraitCollection *)newCollection withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
-    [super willTransitionToTraitCollection:newCollection withTransitionCoordinator:coordinator];
+// Tell the system It should autorotate
+- (BOOL) shouldAutorotate{
+    return YES && (startAppAd_loadShow.STAShouldAutoRotate || startAppAd_autoLoad.STAShouldAutoRotate);
 }
-    
+
 #pragma mark ShowAd button click
 - (IBAction)btnShowAdClick:(id)sender
 {
@@ -112,7 +118,9 @@
     NSLog(@"StartApp Ad had been loaded successfully");
     
     // Show the Ad
-    [startAppAd_loadShow showAd];
+    if (startAppAd_loadShow == ad) {
+        [startAppAd_loadShow showAd];
+    }
 }
 
 // StartApp Ad failed to load
@@ -130,7 +138,18 @@
 // StartApp Ad failed to display
 - (void) failedShowAd:(STAAbstractAd*)ad withError:(NSError *)error;
 {
+    
     NSLog(@"StartApp Ad is failed to display");
+    if (startAppAd_autoLoad == ad) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Can't show ad" message:@"Ad is not loaded yet, please try again" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alertView show];
+    }
+}
+
+- (void) didCloseAd:(STAAbstractAd*)ad {
+    if (startAppAd_autoLoad == ad) {
+        [startAppAd_autoLoad loadAd:STAAdType_Automatic withDelegate:self];
+    }
 }
 
 @end
