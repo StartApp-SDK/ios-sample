@@ -102,7 +102,7 @@
 {
     // load StartApp ad with Automatic AdType and self view controller
     // as a delegation for callbacks
-    [startAppAd_loadShow loadAd:STAAdType_Automatic withDelegate:self];
+    [startAppAd_loadShow loadAdWithDelegate:self];
 }
 
 #pragma mark STADelegateProtocol methods
@@ -148,7 +148,7 @@
 
 - (void) didCloseAd:(STAAbstractAd*)ad {
     if (startAppAd_autoLoad == ad) {
-        [startAppAd_autoLoad loadAd:STAAdType_Automatic withDelegate:self];
+        [startAppAd_autoLoad loadAdWithDelegate:self];
     }
 }
 
