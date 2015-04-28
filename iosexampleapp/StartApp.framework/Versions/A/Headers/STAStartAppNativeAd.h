@@ -4,7 +4,7 @@
 //
 //  Created by StartApp on 9/17/14.
 //  Copyright (c) 2014 StartApp. All rights reserved.
-//
+//  SDK version 2.4.1
 
 
 #import <UIKit/UIKit.h>
@@ -39,10 +39,9 @@ typedef enum {
 - (void) loadAdWithNativeAdPreferences:(STANativeAdPreferences*) nativeAdPrefs;
 - (void) loadAdWithDelegate:(id<STADelegateProtocol>) delegate withNativeAdPreferences:(STANativeAdPreferences*) nativeAdPrefs;
 
+- (BOOL) isReady;
 
+- (void)setAdTag:(NSString *)adTag;
 
-#pragma mark STAAdDelegate -
-- (void) didFinishLoadAd;
-- (void) finishLoadAdWithError: (NSError *) error;
 
 @end

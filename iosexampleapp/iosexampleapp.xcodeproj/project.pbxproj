@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		505F40EA1AEFA89500E6F04C /* StartApp.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 505F40E81AEFA89500E6F04C /* StartApp.bundle */; };
+		505F40EB1AEFA89500E6F04C /* StartApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 505F40E91AEFA89500E6F04C /* StartApp.framework */; };
+		505F40ED1AEFA8A800E6F04C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 505F40EC1AEFA8A800E6F04C /* libz.dylib */; };
 		50CFD3C61A277508000790CA /* STANativeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50CFD3C51A277508000790CA /* STANativeViewController.m */; };
-		50EA2A671A2F782800417065 /* StartApp.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 50EA2A651A2F782800417065 /* StartApp.bundle */; };
-		50EA2A681A2F782800417065 /* StartApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50EA2A661A2F782800417065 /* StartApp.framework */; };
 		88F5AAC918B4AC560006D578 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88F5AAC818B4AC560006D578 /* Foundation.framework */; };
 		88F5AACB18B4AC560006D578 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88F5AACA18B4AC560006D578 /* CoreGraphics.framework */; };
 		88F5AACD18B4AC560006D578 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88F5AACC18B4AC560006D578 /* UIKit.framework */; };
@@ -27,10 +28,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		505F40E81AEFA89500E6F04C /* StartApp.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = StartApp.bundle; sourceTree = "<group>"; };
+		505F40E91AEFA89500E6F04C /* StartApp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = StartApp.framework; sourceTree = "<group>"; };
+		505F40EC1AEFA8A800E6F04C /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		50CFD3C41A277508000790CA /* STANativeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STANativeViewController.h; sourceTree = "<group>"; };
 		50CFD3C51A277508000790CA /* STANativeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STANativeViewController.m; sourceTree = "<group>"; };
-		50EA2A651A2F782800417065 /* StartApp.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = StartApp.bundle; sourceTree = "<group>"; };
-		50EA2A661A2F782800417065 /* StartApp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = StartApp.framework; sourceTree = "<group>"; };
 		88F5AAC518B4AC560006D578 /* iosexampleapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosexampleapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88F5AAC818B4AC560006D578 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		88F5AACA18B4AC560006D578 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -58,12 +60,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				505F40ED1AEFA8A800E6F04C /* libz.dylib in Frameworks */,
 				88F5AB1118B4B5D60006D578 /* AdSupport.framework in Frameworks */,
 				88F5AB0F18B4B5D20006D578 /* StoreKit.framework in Frameworks */,
 				88F5AACB18B4AC560006D578 /* CoreGraphics.framework in Frameworks */,
 				88F5AB0D18B4B5C50006D578 /* SystemConfiguration.framework in Frameworks */,
 				88F5AB0B18B4B5BD0006D578 /* CoreTelephony.framework in Frameworks */,
-				50EA2A681A2F782800417065 /* StartApp.framework in Frameworks */,
+				505F40EB1AEFA89500E6F04C /* StartApp.framework in Frameworks */,
 				88F5AACD18B4AC560006D578 /* UIKit.framework in Frameworks */,
 				88F5AAC918B4AC560006D578 /* Foundation.framework in Frameworks */,
 			);
@@ -75,8 +78,8 @@
 		0848C36C191BB9F100327AB5 /* StartApp SDK */ = {
 			isa = PBXGroup;
 			children = (
-				50EA2A651A2F782800417065 /* StartApp.bundle */,
-				50EA2A661A2F782800417065 /* StartApp.framework */,
+				505F40E81AEFA89500E6F04C /* StartApp.bundle */,
+				505F40E91AEFA89500E6F04C /* StartApp.framework */,
 			);
 			name = "StartApp SDK";
 			sourceTree = "<group>";
@@ -102,6 +105,7 @@
 		88F5AAC718B4AC560006D578 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				505F40EC1AEFA8A800E6F04C /* libz.dylib */,
 				88F5AB1018B4B5D60006D578 /* AdSupport.framework */,
 				88F5AB0E18B4B5D20006D578 /* StoreKit.framework */,
 				88F5AB0C18B4B5C50006D578 /* SystemConfiguration.framework */,
@@ -203,7 +207,7 @@
 				88F5AADF18B4AC560006D578 /* Main_iPad.storyboard in Resources */,
 				88F5AAE418B4AC560006D578 /* Images.xcassets in Resources */,
 				88F5AADC18B4AC560006D578 /* Main_iPhone.storyboard in Resources */,
-				50EA2A671A2F782800417065 /* StartApp.bundle in Resources */,
+				505F40EA1AEFA89500E6F04C /* StartApp.bundle in Resources */,
 				88F5AAD318B4AC560006D578 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
