@@ -1,7 +1,7 @@
 [StartApp][] iOS InApp SDK Example Project
 ======================================
 
-*Updated to InApp SDK version 2.4.1*
+*Updated to InApp SDK version 2.4.2*
 
 This iOS application project provides an example of the [StartApp][] InApp SDK integration.
 
