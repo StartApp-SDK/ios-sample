@@ -3,7 +3,7 @@
 //  StartAppAdSDK
 //
 //  Copyright (c) 2013 StartApp. All rights reserved.
-//  SDK version 2.4.2
+//  SDK version 3.0.0
 
 #import <Foundation/Foundation.h>
 
@@ -20,6 +20,7 @@
 - (void) didCloseAd:(STAAbstractAd*)ad;
 - (void) didClickAd:(STAAbstractAd*)ad;
 - (void) didCloseInAppStore:(STAAbstractAd*)ad;
+- (void) didCompleteVideo:(STAAbstractAd*)ad;
 
 @end
 

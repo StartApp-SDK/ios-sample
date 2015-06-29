@@ -3,7 +3,7 @@
 //  StartAppAdSDK
 //
 //  Copyright (c) 2013 StartApp. All rights reserved.
-//  SDK version 2.4.2
+//  SDK version 3.0.0
 
 #import <UIKit/UIKit.h>
 #import "STAAbstractAd.h"
@@ -24,6 +24,10 @@ typedef enum {
 @property (nonatomic, strong) STAAdPreferences *preferences;
 
 - (id) init;
+
+
+- (void) loadRewardedVideoAdWithDelegate:(id<STADelegateProtocol>) delegate;
+- (void) loadRewardedVideoAdWithDelegate:(id<STADelegateProtocol>) delegate withAdPreferences:(STAAdPreferences*) adPrefs;
 
 - (void) loadAd;
 - (void) loadAdWithAdPreferences:(STAAdPreferences*) adPrefs;
