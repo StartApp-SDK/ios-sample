@@ -1,7 +1,7 @@
 [StartApp][] iOS InApp SDK Example Project
 ======================================
 
-*Updated to InApp SDK version 2.4.2*
+*Updated to InApp SDK version 3.2.3*
 
 This iOS application project provides an example of the [StartApp][] InApp SDK integration.
 
@@ -20,7 +20,8 @@ This ad is loaded upon clicking the 'Load & Show' button, and displayed when the
 
 When integrating the SDK with your application, please make sure to use the latest SDK version, which can be downloaded from our [developers portal](https://developers.startapp.com).  
 Please also follow the integration manual which comes with the SDK.  
-Don't forget to use your developer id and application id when initializing the SDK.  
+
+Don't forget to use your application id when initializing the SDK.  
 
 
 For any questions or assistance, please contact us at support@startapp.com.
