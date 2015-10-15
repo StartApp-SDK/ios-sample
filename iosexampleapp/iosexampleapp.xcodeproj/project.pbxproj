@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5052572D1BD00909002D2F23 /* StartApp.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5052572B1BD00909002D2F23 /* StartApp.bundle */; settings = {ASSET_TAGS = (); }; };
+		5052572E1BD00909002D2F23 /* StartApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5052572C1BD00909002D2F23 /* StartApp.framework */; settings = {ASSET_TAGS = (); }; };
 		505F40ED1AEFA8A800E6F04C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 505F40EC1AEFA8A800E6F04C /* libz.dylib */; };
-		509CD4F41B419C1200DD6BA7 /* StartApp.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 509CD4F21B419C1200DD6BA7 /* StartApp.bundle */; };
-		509CD4F51B419C1200DD6BA7 /* StartApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 509CD4F31B419C1200DD6BA7 /* StartApp.framework */; };
 		509CD4F71B419C2000DD6BA7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 509CD4F61B419C2000DD6BA7 /* AVFoundation.framework */; };
 		509CD4F91B419C2500DD6BA7 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 509CD4F81B419C2500DD6BA7 /* CoreMedia.framework */; };
 		50CFD3C61A277508000790CA /* STANativeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50CFD3C51A277508000790CA /* STANativeViewController.m */; };
@@ -30,9 +30,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5052572B1BD00909002D2F23 /* StartApp.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = StartApp.bundle; sourceTree = "<group>"; };
+		5052572C1BD00909002D2F23 /* StartApp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = StartApp.framework; sourceTree = "<group>"; };
 		505F40EC1AEFA8A800E6F04C /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		509CD4F21B419C1200DD6BA7 /* StartApp.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = StartApp.bundle; sourceTree = "<group>"; };
-		509CD4F31B419C1200DD6BA7 /* StartApp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = StartApp.framework; sourceTree = "<group>"; };
 		509CD4F61B419C2000DD6BA7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		509CD4F81B419C2500DD6BA7 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		50CFD3C41A277508000790CA /* STANativeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STANativeViewController.h; sourceTree = "<group>"; };
@@ -65,11 +65,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				509CD4F91B419C2500DD6BA7 /* CoreMedia.framework in Frameworks */,
+				5052572E1BD00909002D2F23 /* StartApp.framework in Frameworks */,
 				509CD4F71B419C2000DD6BA7 /* AVFoundation.framework in Frameworks */,
 				505F40ED1AEFA8A800E6F04C /* libz.dylib in Frameworks */,
 				88F5AB1118B4B5D60006D578 /* AdSupport.framework in Frameworks */,
 				88F5AB0F18B4B5D20006D578 /* StoreKit.framework in Frameworks */,
-				509CD4F51B419C1200DD6BA7 /* StartApp.framework in Frameworks */,
 				88F5AACB18B4AC560006D578 /* CoreGraphics.framework in Frameworks */,
 				88F5AB0D18B4B5C50006D578 /* SystemConfiguration.framework in Frameworks */,
 				88F5AB0B18B4B5BD0006D578 /* CoreTelephony.framework in Frameworks */,
@@ -84,8 +84,8 @@
 		0848C36C191BB9F100327AB5 /* StartApp SDK */ = {
 			isa = PBXGroup;
 			children = (
-				509CD4F21B419C1200DD6BA7 /* StartApp.bundle */,
-				509CD4F31B419C1200DD6BA7 /* StartApp.framework */,
+				5052572B1BD00909002D2F23 /* StartApp.bundle */,
+				5052572C1BD00909002D2F23 /* StartApp.framework */,
 			);
 			name = "StartApp SDK";
 			sourceTree = "<group>";
@@ -215,7 +215,7 @@
 				88F5AADF18B4AC560006D578 /* Main_iPad.storyboard in Resources */,
 				88F5AAE418B4AC560006D578 /* Images.xcassets in Resources */,
 				88F5AADC18B4AC560006D578 /* Main_iPhone.storyboard in Resources */,
-				509CD4F41B419C1200DD6BA7 /* StartApp.bundle in Resources */,
+				5052572D1BD00909002D2F23 /* StartApp.bundle in Resources */,
 				88F5AAD318B4AC560006D578 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,7 +296,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -329,7 +329,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

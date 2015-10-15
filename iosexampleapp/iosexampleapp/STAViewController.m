@@ -74,8 +74,7 @@
     [super didRotateFromInterfaceOrientation:fromInterfaceOrientation ];
 }
 
-- (NSUInteger)supportedInterfaceOrientations
-{
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
     return UIInterfaceOrientationMaskAll;
 }
 

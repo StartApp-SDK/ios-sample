@@ -4,7 +4,7 @@
 //
 //  Created by StartApp on 3/13/14.
 //  Copyright (c) 2014 StartApp. All rights reserved.
-//  SDK version 3.0.0
+//  SDK version 3.2.3   
 
 #import <Foundation/Foundation.h>
 #import "STAStartAppAd.h"
@@ -36,6 +36,7 @@ typedef enum {
 
 @property (nonatomic, strong) NSString* appID;
 @property (nonatomic, strong) NSString* devID;
+@property (nonatomic, strong) NSString* accountID;
 @property (nonatomic, strong) STASDKPreferences* preferences;
 
 // Disable Return Ad
@@ -53,6 +54,9 @@ typedef enum {
 - (void)unitySDKInitialize;
 - (void)unityAppWillEnterForeground;
 - (void)unityAppDidEnterBackground;
+- (void)setUnitySupportedOrientations:(int)supportedOrientations;
+- (void)setUnityAutoRotation:(int)autoRotation;
+- (void)setUnityVersion:(NSString *)unityVersion;
 
 
 @property (readonly)  NSString* version;

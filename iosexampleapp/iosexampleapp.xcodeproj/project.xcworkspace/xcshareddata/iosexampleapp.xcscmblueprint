@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "682A5AB0BC4220EE0AF17FCC3A136F7E58246DE0",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "BF3CC0FFE337E7663AEC966DCFF20BF2635A3F09" : 0,
+    "682A5AB0BC4220EE0AF17FCC3A136F7E58246DE0" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "03D27C07-1DAF-4215-963C-9954CC048DD8",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "BF3CC0FFE337E7663AEC966DCFF20BF2635A3F09" : "startappios",
+    "682A5AB0BC4220EE0AF17FCC3A136F7E58246DE0" : "StartApp-InApp-iOS-Example-App"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "iosexampleapp",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "iosexampleapp\/iosexampleapp.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/StartApp-SDK\/StartApp-InApp-iOS-Example-App.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "682A5AB0BC4220EE0AF17FCC3A136F7E58246DE0"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "git.assembla.com:startappios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "BF3CC0FFE337E7663AEC966DCFF20BF2635A3F09"
+    }
+  ]
+}
