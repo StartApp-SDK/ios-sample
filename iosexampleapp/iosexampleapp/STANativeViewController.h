@@ -10,12 +10,9 @@
 #import <StartApp/StartApp.h>
 
 @interface STANativeViewController : UIViewController <STADelegateProtocol> {
-
+    
     /* Declaration of STAStartAppNativeAd which will load and store all the ads we intend to display */
     STAStartAppNativeAd *startAppNativeAd;
-    
-    /* Specific details about each ad */
-    STANativeAdDetails *adDetails;
 }
 
 @end
