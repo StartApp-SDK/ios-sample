@@ -24,6 +24,7 @@ Please also follow the integration manual which comes with the SDK.
 Don't forget to use your application id when initializing the SDK.  
 
 
-For any questions or assistance, please contact us at support@startapp.com.
+
+ For any questions or assistance, please contact us at support@startapp.com.
 
 [StartApp]: http://www.startapp.com
