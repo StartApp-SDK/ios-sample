@@ -2,7 +2,7 @@
 //  STANativeViewController.h
 //  iosexampleapp
 //
-//  Created by Nadav on 11/27/14.
+//  Created by StartApp on 11/27/14.
 //  Copyright (c) 2014 StartApp. All rights reserved.
 //
 
