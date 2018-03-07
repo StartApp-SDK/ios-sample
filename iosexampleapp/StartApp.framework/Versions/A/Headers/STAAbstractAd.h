@@ -3,10 +3,16 @@
 //  StartAppAdSDK
 //
 //  Copyright (c) 2013 StartApp. All rights reserved.
-//  SDK version 3.2.3
+//  SDK version 3.6.0
 
 #import <Foundation/Foundation.h>
 
+//Show ad failure reasons:
+#define FAIL_REASON_NO_INTERNET                             @"No internet connection."
+#define FAIL_REASON_AD_RULES                                @"Ad Rules"
+#define FAIL_REASON_AD_ALREADY_DISPLAYED                    @"An ad is already displayed"
+#define FAIL_REASON_AD_NOT_READY                            @"Ad is not loaded"
+#define FAIL_REASON_INTERNAL_ERROR                          @"Internal error"
 
 
 @class STAAbstractAd; // << Forward declaration
@@ -23,23 +29,6 @@
 - (void) didCompleteVideo:(STAAbstractAd*)ad;
 
 @end
-
-@interface STAUserLocation : NSObject
-@property  double latitude;
-@property  double longitude;
-
-
-@end
-
-
-// STAAdPreferences holds params specific to an ad
-@interface STAAdPreferences : NSObject
-@property (nonatomic,retain) STAUserLocation *userLocation;
-//@property (nonatomic, retain) NSString *adTag;
-
-+ (instancetype)prefrencesWithLatitude:(double) latitude andLongitude:(double)longitude andAdTag:(NSString *) adTag;
-@end
-
 
 @interface STAAbstractAd : NSObject
 

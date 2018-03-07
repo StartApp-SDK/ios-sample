@@ -2,9 +2,9 @@
 //  STAStartAppAdBasic.h
 //  StartApp
 //
-//  Created by Adir Genish on 3/3/15.
-//  Copyright (c) 2015 StartApp. All rights reserved.
-//  SDK version 3.2.3
+//  Created by StartApp on 3/3/15.
+//  Copyright (c) 2013 StartApp. All rights reserved.
+//  SDK version 3.6.0
 
 #import <Foundation/Foundation.h>
 
