@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="DmJ-wY-5Dm">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="BFk-bn-Rif">
+            <objects>
+                <viewController id="G9W-fb-QqB" customClass="STAViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="unZ-sV-oaA"/>
+                        <viewControllerLayoutGuide type="bottom" id="0i9-QU-umi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="exL-HU-NYC">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xAd-E7-rHm">
+                                <rect key="frame" x="266.5" y="82" width="235" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Show Ad (recomended)">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnShowAdClick:" destination="G9W-fb-QqB" eventType="touchUpInside" id="MXd-Ca-ZKA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vnk-kK-JDW">
+                                <rect key="frame" x="235" y="130" width="298" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Load &amp; Show (using delegate)">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnLoadShowClick:" destination="G9W-fb-QqB" eventType="touchUpInside" id="rrb-eo-q2u"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6XL-td-A5l">
+                                <rect key="frame" x="285" y="178" width="198" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Native Ads Example">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="4iP-oP-uXK" kind="modal" id="Upe-vq-A5F"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Banner size:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ajf-us-xNV">
+                                <rect key="frame" x="323.5" y="234" width="121" height="27.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="98T-Fp-uCW">
+                                <rect key="frame" x="177" y="266.5" width="100" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="1qS-E5-g8F"/>
+                                    <constraint firstAttribute="height" constant="40" id="Ddb-H1-Z3R"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Auto"/>
+                                <connections>
+                                    <action selector="btnAutoBannerSizeClick:" destination="G9W-fb-QqB" eventType="touchUpInside" id="LfB-yF-T8P"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GwG-OU-RjY">
+                                <rect key="frame" x="282" y="266.5" width="100" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="omT-Zn-5gh"/>
+                                    <constraint firstAttribute="height" constant="40" id="qgs-Ip-bbp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="768x90"/>
+                                <connections>
+                                    <action selector="btn768x90BannerSizeClick:" destination="G9W-fb-QqB" eventType="touchUpInside" id="0aP-GK-Nab"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v6X-Eb-Pcg">
+                                <rect key="frame" x="386" y="266.5" width="100" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="BEb-Vn-yT8"/>
+                                    <constraint firstAttribute="height" constant="40" id="vzf-gl-if5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="MRec"/>
+                                <connections>
+                                    <action selector="btnMRecBannerSizeClick:" destination="G9W-fb-QqB" eventType="touchUpInside" id="WEA-py-vUM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TNP-qg-zbi">
+                                <rect key="frame" x="491" y="266.5" width="100" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="NoY-7Q-HOI"/>
+                                    <constraint firstAttribute="width" constant="100" id="dAc-Nf-yJE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Cover"/>
+                                <connections>
+                                    <action selector="btnCoverBannerSizeClick:" destination="G9W-fb-QqB" eventType="touchUpInside" id="hQG-yz-2zT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="TNP-qg-zbi" firstAttribute="top" secondItem="ajf-us-xNV" secondAttribute="bottom" constant="5" id="0Ar-cq-UZ9"/>
+                            <constraint firstItem="GwG-OU-RjY" firstAttribute="top" secondItem="ajf-us-xNV" secondAttribute="bottom" constant="5" id="7G5-wO-RVW"/>
+                            <constraint firstItem="98T-Fp-uCW" firstAttribute="top" secondItem="ajf-us-xNV" secondAttribute="bottom" constant="5" id="80Q-t0-URv"/>
+                            <constraint firstItem="v6X-Eb-Pcg" firstAttribute="top" secondItem="ajf-us-xNV" secondAttribute="bottom" constant="5" id="ATc-S7-CVw"/>
+                            <constraint firstItem="6XL-td-A5l" firstAttribute="centerX" secondItem="exL-HU-NYC" secondAttribute="centerX" id="Ahy-Vf-2Oi"/>
+                            <constraint firstItem="ajf-us-xNV" firstAttribute="top" secondItem="6XL-td-A5l" secondAttribute="bottom" constant="16" id="Cc3-b9-UuO"/>
+                            <constraint firstItem="v6X-Eb-Pcg" firstAttribute="centerX" secondItem="exL-HU-NYC" secondAttribute="centerX" constant="52" id="FNW-Ut-8EN"/>
+                            <constraint firstItem="TNP-qg-zbi" firstAttribute="leading" secondItem="v6X-Eb-Pcg" secondAttribute="trailing" constant="5" id="Fgb-ms-tW5"/>
+                            <constraint firstItem="xAd-E7-rHm" firstAttribute="centerX" secondItem="exL-HU-NYC" secondAttribute="centerX" id="HpE-gc-Ze6"/>
+                            <constraint firstItem="GwG-OU-RjY" firstAttribute="leading" secondItem="98T-Fp-uCW" secondAttribute="trailing" constant="5" id="Ieq-AK-fFc"/>
+                            <constraint firstItem="vnk-kK-JDW" firstAttribute="top" secondItem="xAd-E7-rHm" secondAttribute="bottom" constant="8" id="Nhb-tz-46a"/>
+                            <constraint firstItem="ajf-us-xNV" firstAttribute="centerX" secondItem="exL-HU-NYC" secondAttribute="centerX" id="X87-V8-DAr"/>
+                            <constraint firstItem="xAd-E7-rHm" firstAttribute="top" secondItem="exL-HU-NYC" secondAttribute="top" constant="82" id="djg-DT-UVM"/>
+                            <constraint firstItem="GwG-OU-RjY" firstAttribute="centerX" secondItem="exL-HU-NYC" secondAttribute="centerX" constant="-52" id="gvs-gi-Z4m"/>
+                            <constraint firstItem="vnk-kK-JDW" firstAttribute="centerX" secondItem="exL-HU-NYC" secondAttribute="centerX" id="pyb-3b-csp"/>
+                            <constraint firstItem="6XL-td-A5l" firstAttribute="top" secondItem="vnk-kK-JDW" secondAttribute="bottom" constant="8" id="rUh-Eo-XQG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="OCd-EJ-5AF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="agf-c9-Epy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="464" y="228"/>
+        </scene>
+        <!--Native Ads-->
+        <scene sceneID="zZD-i1-yMv">
+            <objects>
+                <viewController id="4iP-oP-uXK" customClass="STANativeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="N4R-SW-MI2"/>
+                        <viewControllerLayoutGuide type="bottom" id="HAQ-8I-xzQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qH6-e3-ujl">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UvD-0x-U5g">
+                                <rect key="frame" x="29" y="20" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Close">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismiss:" destination="4iP-oP-uXK" eventType="touchUpInside" id="l2Y-xG-gDG"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WsX-lp-jRQ">
+                                <rect key="frame" x="0.0" y="66" width="768" height="958"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="4iP-oP-uXK" id="WrB-PG-sjR"/>
+                                    <outlet property="delegate" destination="4iP-oP-uXK" id="4EL-nw-LGK"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XqD-hN-VQ2">
+                                <rect key="frame" x="307" y="20" width="154" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Load Ad">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="loadAd:" destination="4iP-oP-uXK" eventType="touchUpInside" id="UiB-Dz-ljM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Native Ads" id="9Gi-dd-My3"/>
+                    <connections>
+                        <outlet property="myTableView" destination="WsX-lp-jRQ" id="ith-iG-7Lz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oh8-Rf-yLs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1387" y="228"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nbl-qd-9Br">
+            <objects>
+                <navigationController id="DmJ-wY-5Dm" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cMw-jo-lcc">
+                        <rect key="frame" x="0.0" y="20" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="G9W-fb-QqB" kind="relationship" relationship="rootViewController" id="21Z-1w-KdU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="le2-rH-Rcp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-480" y="228"/>
+        </scene>
+    </scenes>
+</document>

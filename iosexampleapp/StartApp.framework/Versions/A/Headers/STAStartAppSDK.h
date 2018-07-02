@@ -4,7 +4,7 @@
 //
 //  Created by StartApp on 3/13/14.
 //  Copyright (c) 2014 StartApp. All rights reserved.
-//  SDK version 3.6.0
+//  SDK version 3.8.0
 
 #import <Foundation/Foundation.h>
 #import "STAStartAppAd.h"
@@ -55,6 +55,8 @@ typedef enum {
 -(void)inAppPurchaseMade;
 -(void)inAppPurchaseMadeWithAmount:(float)amount;
 -(void)startNewSession;
+
+-(void)setUserConsent:(BOOL)consent forConsentType:(NSString *)consentType withTimestamp:(long)ts;
 
 
 //Unity methods

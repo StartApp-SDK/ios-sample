@@ -36,11 +36,11 @@
      load the StartApp auto position banner, banner size will be assigned automatically by  StartApp
      NOTE: replace the ApplicationID and the PublisherID with your own IDs
      */
-    if (startAppBanner_auto == nil) {
-        startAppBanner_auto = [[STABannerView alloc] initWithSize:STA_AutoAdSize
+    if (startAppBanner_bottom == nil) {
+        startAppBanner_bottom = [[STABannerView alloc] initWithSize:STA_AutoAdSize
                                                      autoOrigin:STAAdOrigin_Bottom
                                                      withView:self.view withDelegate:nil];
-        [self.view addSubview:startAppBanner_auto];
+        [self.view addSubview:startAppBanner_bottom];
     }
     
     /*
@@ -51,11 +51,11 @@
         if ( UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad )
         {
             startAppBanner_fixed = [[STABannerView alloc] initWithSize:STA_PortraitAdSize_768x90
-                                                                origin:CGPointMake(0,300)
+                                                                origin:CGPointMake(0,400)
                                                               withView:self.view withDelegate:nil];
         } else {
             startAppBanner_fixed = [[STABannerView alloc] initWithSize:STA_PortraitAdSize_320x50
-                                                                origin:CGPointMake(0,200)
+                                                                origin:CGPointMake(0, 130)
                                                               withView:self.view withDelegate:nil];
         }
 
@@ -66,7 +66,7 @@
 - (void) didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
     
     // notify StartApp auto Banner orientation change
-    [startAppBanner_auto didRotateFromInterfaceOrientation:fromInterfaceOrientation];
+    [startAppBanner_bottom didRotateFromInterfaceOrientation:fromInterfaceOrientation];
     
     // notify StartApp fixed position Banner orientation change
     [startAppBanner_fixed didRotateFromInterfaceOrientation:fromInterfaceOrientation];
@@ -103,6 +103,24 @@
     // as a delegation for callbacks
     [startAppAd_loadShow loadAdWithDelegate:self];
 }
+
+#pragma mark Banner Size methods
+- (IBAction)btnAutoBannerSizeClick:(id)sender {
+    [startAppBanner_bottom setSTABannerSize:STA_AutoAdSize];
+}
+- (IBAction)btn320x50BannerSizeClick:(id)sender {
+    [startAppBanner_bottom setSTABannerSize:STA_PortraitAdSize_320x50];
+}
+- (IBAction)btn768x90BannerSizeClick:(id)sender {
+    [startAppBanner_bottom setSTABannerSize:STA_PortraitAdSize_768x90];
+}
+- (IBAction)btnMRecBannerSizeClick:(id)sender {
+    [startAppBanner_bottom setSTABannerSize:STA_MRecAdSize_300x250];
+}
+- (IBAction)btnCoverBannerSizeClick:(id)sender {
+    [startAppBanner_bottom setSTABannerSize:STA_CoverAdSize];
+}
+
 
 #pragma mark STADelegateProtocol methods
 /*

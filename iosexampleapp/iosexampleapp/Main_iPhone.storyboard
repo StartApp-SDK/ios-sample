@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Example App-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="STAViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yOF-pF-aDh"/>
+                        <viewControllerLayoutGuide type="bottom" id="lnZ-rn-JZf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mhd-Cp-4hz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1XU-AJ-3n6">
+                                <rect key="frame" x="57" y="58" width="206" height="30"/>
+                                <state key="normal" title="Load &amp; Show (using delegate)">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnLoadShowClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ViG-rp-rZ9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vpn-oI-9vO">
+                                <rect key="frame" x="79" y="20" width="162" height="30"/>
+                                <state key="normal" title="Show Ad (recomended)">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnShowAdClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ggO-bu-XDn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NxE-cC-uAC">
+                                <rect key="frame" x="92" y="96" width="136" height="30"/>
+                                <state key="normal" title="Native Ads Example">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ibo-DS-Ehc" kind="modal" id="DpN-py-sNw"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Banner size:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Olu-ai-KTN">
+                                <rect key="frame" x="107" y="206" width="106" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M0w-LD-8NH">
+                                <rect key="frame" x="15" y="235" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="FsP-YY-0pD"/>
+                                    <constraint firstAttribute="height" constant="30" id="fxX-5Y-2RX"/>
+                                </constraints>
+                                <state key="normal" title="Auto"/>
+                                <connections>
+                                    <action selector="btnAutoBannerSizeClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="vsg-t6-bCp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nh8-F6-4Vd">
+                                <rect key="frame" x="80" y="235" width="80" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="51l-6P-U8h"/>
+                                    <constraint firstAttribute="height" constant="30" id="rsg-Kh-eMe"/>
+                                </constraints>
+                                <state key="normal" title="320x50"/>
+                                <connections>
+                                    <action selector="btn320x50BannerSizeClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="wY0-oY-dd9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLs-dR-4fq">
+                                <rect key="frame" x="165" y="235" width="70" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="0Z9-Vs-VM4"/>
+                                    <constraint firstAttribute="width" constant="70" id="KRN-RQ-LmI"/>
+                                </constraints>
+                                <state key="normal" title="MRec"/>
+                                <connections>
+                                    <action selector="btnMRecBannerSizeClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9Gn-It-9Oo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQ4-op-ce8">
+                                <rect key="frame" x="240" y="235" width="70" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="4hS-jA-LPn"/>
+                                    <constraint firstAttribute="height" constant="30" id="VgS-hW-ZUm"/>
+                                </constraints>
+                                <state key="normal" title="Cover"/>
+                                <connections>
+                                    <action selector="btnCoverBannerSizeClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ZAf-zG-1pc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Olu-ai-KTN" firstAttribute="top" secondItem="NxE-cC-uAC" secondAttribute="bottom" constant="80" id="0We-pv-WZF"/>
+                            <constraint firstItem="yQ4-op-ce8" firstAttribute="top" secondItem="Olu-ai-KTN" secondAttribute="bottom" constant="5" id="CkA-r3-KDE"/>
+                            <constraint firstItem="NxE-cC-uAC" firstAttribute="centerX" secondItem="mhd-Cp-4hz" secondAttribute="centerX" id="L6K-xX-1Fy"/>
+                            <constraint firstItem="Olu-ai-KTN" firstAttribute="centerX" secondItem="mhd-Cp-4hz" secondAttribute="centerX" id="Nzc-ar-tel"/>
+                            <constraint firstItem="1XU-AJ-3n6" firstAttribute="top" secondItem="Vpn-oI-9vO" secondAttribute="bottom" constant="8" id="PEe-PO-iZE"/>
+                            <constraint firstItem="Nh8-F6-4Vd" firstAttribute="leading" secondItem="M0w-LD-8NH" secondAttribute="trailing" constant="5" id="Py6-gr-k8j"/>
+                            <constraint firstItem="1XU-AJ-3n6" firstAttribute="centerX" secondItem="mhd-Cp-4hz" secondAttribute="centerX" id="Wsc-in-cRw"/>
+                            <constraint firstItem="Nh8-F6-4Vd" firstAttribute="centerX" secondItem="mhd-Cp-4hz" secondAttribute="centerX" constant="-40" id="XCa-lq-PsH"/>
+                            <constraint firstItem="NxE-cC-uAC" firstAttribute="top" secondItem="1XU-AJ-3n6" secondAttribute="bottom" constant="8" id="ZtR-No-Prm"/>
+                            <constraint firstItem="M0w-LD-8NH" firstAttribute="top" secondItem="Olu-ai-KTN" secondAttribute="bottom" constant="5" id="cfp-7m-mgw"/>
+                            <constraint firstItem="eLs-dR-4fq" firstAttribute="top" secondItem="Olu-ai-KTN" secondAttribute="bottom" constant="5" id="fuN-xj-wqQ"/>
+                            <constraint firstItem="Nh8-F6-4Vd" firstAttribute="top" secondItem="Olu-ai-KTN" secondAttribute="bottom" constant="5" id="hdd-N4-8g5"/>
+                            <constraint firstItem="yQ4-op-ce8" firstAttribute="leading" secondItem="eLs-dR-4fq" secondAttribute="trailing" constant="5" id="oeX-bW-5AJ"/>
+                            <constraint firstItem="Vpn-oI-9vO" firstAttribute="centerX" secondItem="mhd-Cp-4hz" secondAttribute="centerX" id="wjo-At-ppD"/>
+                            <constraint firstItem="Vpn-oI-9vO" firstAttribute="top" secondItem="mhd-Cp-4hz" secondAttribute="top" constant="20" id="wnm-AH-Tgt"/>
+                            <constraint firstItem="eLs-dR-4fq" firstAttribute="centerX" secondItem="mhd-Cp-4hz" secondAttribute="centerX" constant="40" id="zhF-JO-CGn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Example App" id="Lyz-Dw-udJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <containerView contentMode="scaleToFill" id="aoR-eA-2aw">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </containerView>
+            </objects>
+            <point key="canvasLocation" x="234" y="136"/>
+        </scene>
+        <!--Native Ads-->
+        <scene sceneID="Qmp-VM-2mZ">
+            <objects>
+                <viewController id="ibo-DS-Ehc" customClass="STANativeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Rh7-Cc-obf"/>
+                        <viewControllerLayoutGuide type="bottom" id="XYH-Ud-5fJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2Z7-hc-edu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H6w-9f-yg2">
+                                <rect key="frame" x="16" y="15" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Close">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismiss:" destination="ibo-DS-Ehc" eventType="touchUpInside" id="Xlw-D5-FOb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Bh-hc-vYW">
+                                <rect key="frame" x="110" y="15" width="101" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Load Ad">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="loadAd:" destination="ibo-DS-Ehc" eventType="touchUpInside" id="NKO-HL-h8M"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lH8-FF-Oo2">
+                                <rect key="frame" x="0.0" y="66" width="320" height="502"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="ibo-DS-Ehc" id="h0p-N4-X0y"/>
+                                    <outlet property="delegate" destination="ibo-DS-Ehc" id="ZTX-2y-v2n"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Native Ads" id="4Rc-Ib-r3x"/>
+                    <connections>
+                        <outlet property="myTableView" destination="lH8-FF-Oo2" id="6fp-H3-jaT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DAV-GZ-bER" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="706" y="136"/>
+        </scene>
+    </scenes>
+</document>

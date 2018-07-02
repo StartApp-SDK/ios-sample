@@ -3,7 +3,7 @@
 //  StartAppAdSDK
 //
 //  Copyright (c) 2013 StartApp. All rights reserved.
-//  SDK version 3.6.0
+//  SDK version 3.8.0
 
 #import <Foundation/Foundation.h>
 
@@ -12,6 +12,7 @@
 #define FAIL_REASON_AD_RULES                                @"Ad Rules"
 #define FAIL_REASON_AD_ALREADY_DISPLAYED                    @"An ad is already displayed"
 #define FAIL_REASON_AD_NOT_READY                            @"Ad is not loaded"
+#define FAIL_REASON_AD_EXPIRED                              @"Ad expired"
 #define FAIL_REASON_INTERNAL_ERROR                          @"Internal error"
 
 

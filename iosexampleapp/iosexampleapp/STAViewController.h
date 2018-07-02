@@ -29,9 +29,9 @@
     STAStartAppAd *startAppAd_loadShow;
     
     /*
-     Declaration of StartApp Banner view with automatic positioning
+     Declaration of StartApp Banner view with variable size and bottom positioning
      */
-    STABannerView *startAppBanner_auto;
+    STABannerView *startAppBanner_bottom;
     
     /*
      Declaration of StartApp Banner view with fixed positioning and size
