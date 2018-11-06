@@ -10,7 +10,6 @@
 
 @interface STANativeViewController ()
 
-
 @property (nonatomic, retain)  IBOutlet UITableView *myTableView;
 
 @end
@@ -24,14 +23,6 @@
     startAppNativeAd = [[STAStartAppNativeAd alloc] init];
 }
 
--(void)viewDidAppear:(BOOL)animated{
-    //Adjust the tableView frame to fit the screen size
-    CGRect frame = self.view.frame;
-    frame.origin.y = 66;
-    frame.size.height = frame.size.height - 66;
-    self.myTableView.frame = frame;
-}
-
 - (IBAction)loadAd:(id)sender {
     // Loading the ad
     self.myTableView.hidden = YES;
@@ -43,19 +34,18 @@
 }
 
 // Delegate method to know when the ad finished loading
-- (void)didLoadAd:(STAAbstractAd *)ad {
+- (void)didLoadAd:(STAAbstractAd*)ad {
     self.myTableView.hidden = NO;
     //Reload tableView data
     [self.myTableView reloadData];
 }
 
-- (void)failedLoadAd:(STAAbstractAd *)ad withError:(NSError *)error {
+- (void)failedLoadAd:(STAAbstractAd*)ad withError:(NSError*)error {
     // Failed loading the ad, do something else.
 }
 
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    
+- (NSInteger)numberOfSectionsInTableView:(UITableView*)tableView {
     return 1;
 }
 
@@ -69,10 +59,9 @@
 
 // Customize the appearance of table view cells.
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    static NSString *CellIdentifier = @"CustomCell";
-    UITableViewCell *cell=nil;
+- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath {
+    static NSString* CellIdentifier = @"CustomCell";
+    UITableViewCell* cell = nil;
     cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (cell == nil)  {
@@ -82,7 +71,7 @@
     cell.backgroundColor = [UIColor clearColor];
     
     //Set cell's text and image from the native ad adDetails
-    STANativeAdDetails *adDetails = [startAppNativeAd.adsDetails objectAtIndex:indexPath.row];
+    STANativeAdDetails* adDetails = [startAppNativeAd.adsDetails objectAtIndex:indexPath.row];
     cell.textLabel.text=[[startAppNativeAd.adsDetails objectAtIndex:indexPath.row] title];
     cell.textLabel.numberOfLines= 2;
     cell.imageView.image=[[startAppNativeAd.adsDetails objectAtIndex:indexPath.row] imageBitmap];
@@ -93,7 +82,7 @@
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+- (void)tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath {
     //Send click
     STANativeAdDetails *adDetails = [startAppNativeAd.adsDetails objectAtIndex:indexPath.row];
     [adDetails sendClick];

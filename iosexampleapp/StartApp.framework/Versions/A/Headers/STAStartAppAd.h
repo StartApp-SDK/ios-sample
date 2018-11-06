@@ -3,7 +3,7 @@
 //  StartAppAdSDK
 //
 //  Copyright (c) 2013 StartApp. All rights reserved.
-//  SDK version 3.8.0
+//  SDK version 3.10.1
 
 #import <UIKit/UIKit.h>
 #import "STAAbstractAd.h"
@@ -18,6 +18,11 @@
 
 - (void) loadRewardedVideoAdWithDelegate:(id<STADelegateProtocol>) delegate;
 - (void) loadRewardedVideoAdWithDelegate:(id<STADelegateProtocol>) delegate withAdPreferences:(STAAdPreferences*) adPrefs;
+
+- (void) loadVideoAd;
+- (void) loadVideoAdWithAdPreferences:(STAAdPreferences*) adPrefs;
+- (void) loadVideoAdWithDelegate:(id<STADelegateProtocol>) delegate;
+- (void) loadVideoAdWithDelegate:(id<STADelegateProtocol>) delegate withAdPreferences:(STAAdPreferences*) adPrefs;
 
 - (void) loadAd;
 - (void) loadAdWithAdPreferences:(STAAdPreferences*) adPrefs;
