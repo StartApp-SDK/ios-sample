@@ -8,6 +8,8 @@
 
 #import "STANativeViewController.h"
 
+#define kAdCellsInterval    5
+
 @interface STANativeViewController ()
 
 @property (nonatomic, retain)  IBOutlet UITableView *myTableView;
@@ -50,58 +52,51 @@
 }
 
 // Customize the number of rows in the table view.
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    //Set the number of rows
-    return startAppNativeAd.adsDetails.count;
+    //Set the number of rows. Every 5th cell is cell with ad
+    return startAppNativeAd.adsDetails.count * kAdCellsInterval;
     
 }
 
 // Customize the appearance of table view cells.
-
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath {
-    static NSString* CellIdentifier = @"CustomCell";
-    UITableViewCell* cell = nil;
-    cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    static NSString* regularCellIdentifier = @"RegularCell";
+    static NSString* adCellIdentifier = @"AdCell";
     
+    BOOL isAdCell = indexPath.row % kAdCellsInterval == 0;
+    NSString *cellIdentifier = (isAdCell) ? adCellIdentifier : regularCellIdentifier;
+    
+    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell == nil)  {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        cell.backgroundColor = [UIColor clearColor];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     
-    cell.backgroundColor = [UIColor clearColor];
-    
-    //Set cell's text and image from the native ad adDetails
-    STANativeAdDetails* adDetails = [startAppNativeAd.adsDetails objectAtIndex:indexPath.row];
-    cell.textLabel.text=[[startAppNativeAd.adsDetails objectAtIndex:indexPath.row] title];
-    cell.textLabel.numberOfLines= 2;
-    cell.imageView.image=[[startAppNativeAd.adsDetails objectAtIndex:indexPath.row] imageBitmap];
-    
-    //Send impression
-    [adDetails sendImpression];
+    if (isAdCell) {
+        //Set cell's text and image from the native ad adDetails
+        NSInteger adIndex = indexPath.row / kAdCellsInterval;
+        STANativeAdDetails* adDetails = [startAppNativeAd.adsDetails objectAtIndex:adIndex];
+        cell.textLabel.text = [adDetails title];
+        cell.textLabel.numberOfLines = 2;
+        cell.imageView.image = [adDetails imageBitmap];
+        
+        //Registering cell for automatic impression and click tracking
+        [adDetails registerViewForImpressionAndClick:cell];
+    }
+    else {
+        cell.textLabel.text = [NSString stringWithFormat:@"Regular cell at row = %ld", (long)indexPath.row];
+    }
     
     return cell;
 }
-
-- (void)tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath {
-    //Send click
-    STANativeAdDetails *adDetails = [startAppNativeAd.adsDetails objectAtIndex:indexPath.row];
-    [adDetails sendClick];
-}
-
-
 
 - (BOOL)shouldAutorotate {
     return NO;
 }
 
-
 - (IBAction)dismiss:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

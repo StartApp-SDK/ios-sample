@@ -7,10 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3E8423D0204FFC5B00738082 /* StartApp.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3E8423CE204FFC5A00738082 /* StartApp.bundle */; };
 		3E9EDCE1208790AA0066C4E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E9EDCE0208790AA0066C4E0 /* Main.storyboard */; };
 		49329C62219041D600069B07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49329C61219041D600069B07 /* LaunchScreen.storyboard */; };
-		49329C6821906B8A00069B07 /* StartApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E8423CF204FFC5B00738082 /* StartApp.framework */; };
 		49329C702190701100069B07 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49329C6F2190701100069B07 /* SystemConfiguration.framework */; };
 		49329C722190706900069B07 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49329C712190706900069B07 /* CoreTelephony.framework */; };
 		49329C742190708500069B07 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49329C732190708400069B07 /* AdSupport.framework */; };
@@ -24,11 +22,11 @@
 		88F5AAD918B4AC560006D578 /* STAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F5AAD818B4AC560006D578 /* STAAppDelegate.m */; };
 		88F5AAE218B4AC560006D578 /* STAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F5AAE118B4AC560006D578 /* STAViewController.m */; };
 		88F5AAE418B4AC560006D578 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88F5AAE318B4AC560006D578 /* Images.xcassets */; };
+		9697140DAF003F36A92B62E0 /* libPods-iosexampleapp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 678206CE3FA942C7C99E0E79 /* libPods-iosexampleapp.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3E8423CE204FFC5A00738082 /* StartApp.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = StartApp.bundle; sourceTree = "<group>"; };
-		3E8423CF204FFC5B00738082 /* StartApp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = StartApp.framework; sourceTree = "<group>"; };
+		2E71FCCFAD9FFE0D1308ED01 /* Pods-iosexampleapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosexampleapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-iosexampleapp/Pods-iosexampleapp.release.xcconfig"; sourceTree = "<group>"; };
 		3E9EDCE0208790AA0066C4E0 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		49329C61219041D600069B07 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49329C632190685A00069B07 /* iosexampleapp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iosexampleapp.entitlements; sourceTree = "<group>"; };
@@ -42,6 +40,7 @@
 		49329C7D21908AE400069B07 /* STAGdprViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STAGdprViewController.m; sourceTree = "<group>"; };
 		50CFD3C41A277508000790CA /* STANativeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STANativeViewController.h; sourceTree = "<group>"; };
 		50CFD3C51A277508000790CA /* STANativeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STANativeViewController.m; sourceTree = "<group>"; };
+		678206CE3FA942C7C99E0E79 /* libPods-iosexampleapp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iosexampleapp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88F5AAC518B4AC560006D578 /* iosexampleapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosexampleapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88F5AAD018B4AC560006D578 /* iosexampleapp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iosexampleapp-Info.plist"; sourceTree = "<group>"; };
 		88F5AAD218B4AC560006D578 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -52,6 +51,7 @@
 		88F5AAE018B4AC560006D578 /* STAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STAViewController.h; sourceTree = "<group>"; };
 		88F5AAE118B4AC560006D578 /* STAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STAViewController.m; sourceTree = "<group>"; };
 		88F5AAE318B4AC560006D578 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9A96B7B402CE17229F058966 /* Pods-iosexampleapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosexampleapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iosexampleapp/Pods-iosexampleapp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,22 +63,13 @@
 				49329C742190708500069B07 /* AdSupport.framework in Frameworks */,
 				49329C722190706900069B07 /* CoreTelephony.framework in Frameworks */,
 				49329C702190701100069B07 /* SystemConfiguration.framework in Frameworks */,
-				49329C6821906B8A00069B07 /* StartApp.framework in Frameworks */,
+				9697140DAF003F36A92B62E0 /* libPods-iosexampleapp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0848C36C191BB9F100327AB5 /* StartApp SDK */ = {
-			isa = PBXGroup;
-			children = (
-				3E8423CE204FFC5A00738082 /* StartApp.bundle */,
-				3E8423CF204FFC5B00738082 /* StartApp.framework */,
-			);
-			name = "StartApp SDK";
-			sourceTree = "<group>";
-		};
 		49329C6721906B8A00069B07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +77,7 @@
 				49329C732190708400069B07 /* AdSupport.framework */,
 				49329C712190706900069B07 /* CoreTelephony.framework */,
 				49329C6F2190701100069B07 /* SystemConfiguration.framework */,
+				678206CE3FA942C7C99E0E79 /* libPods-iosexampleapp.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -102,10 +94,10 @@
 		88F5AABC18B4AC560006D578 = {
 			isa = PBXGroup;
 			children = (
-				0848C36C191BB9F100327AB5 /* StartApp SDK */,
 				88F5AACE18B4AC560006D578 /* iosexampleapp */,
 				88F5AAC618B4AC560006D578 /* Products */,
 				49329C6721906B8A00069B07 /* Frameworks */,
+				E3E7CBF99A26480D88BD4AFB /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -149,6 +141,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E3E7CBF99A26480D88BD4AFB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9A96B7B402CE17229F058966 /* Pods-iosexampleapp.debug.xcconfig */,
+				2E71FCCFAD9FFE0D1308ED01 /* Pods-iosexampleapp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -156,9 +157,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 88F5AAFA18B4AC560006D578 /* Build configuration list for PBXNativeTarget "iosexampleapp" */;
 			buildPhases = (
+				6008D6C0F103F34A6152DA39 /* [CP] Check Pods Manifest.lock */,
 				88F5AAC118B4AC560006D578 /* Sources */,
 				88F5AAC218B4AC560006D578 /* Frameworks */,
 				88F5AAC318B4AC560006D578 /* Resources */,
+				AFEA4F7BAD74FDCB25151767 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -216,12 +219,58 @@
 				3E9EDCE1208790AA0066C4E0 /* Main.storyboard in Resources */,
 				49329C62219041D600069B07 /* LaunchScreen.storyboard in Resources */,
 				49329C7A2190898A00069B07 /* gotham_medium.ttf in Resources */,
-				3E8423D0204FFC5B00738082 /* StartApp.bundle in Resources */,
 				88F5AAD318B4AC560006D578 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6008D6C0F103F34A6152DA39 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iosexampleapp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AFEA4F7BAD74FDCB25151767 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-iosexampleapp/Pods-iosexampleapp-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/StartAppSDK/StartAppSDK.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/StartAppSDK.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iosexampleapp/Pods-iosexampleapp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		88F5AAC118B4AC560006D578 /* Sources */ = {
@@ -351,6 +400,7 @@
 		};
 		88F5AAFB18B4AC560006D578 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A96B7B402CE17229F058966 /* Pods-iosexampleapp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -365,6 +415,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iosexampleapp/iosexampleapp-Prefix.pch";
 				INFOPLIST_FILE = "iosexampleapp/iosexampleapp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "${SRCROOT}";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.startapp.${PRODUCT_NAME:rfc1034identifier}";
@@ -377,6 +428,7 @@
 		};
 		88F5AAFC18B4AC560006D578 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E71FCCFAD9FFE0D1308ED01 /* Pods-iosexampleapp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -391,6 +443,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iosexampleapp/iosexampleapp-Prefix.pch";
 				INFOPLIST_FILE = "iosexampleapp/iosexampleapp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "${SRCROOT}";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.startapp.${PRODUCT_NAME:rfc1034identifier}";

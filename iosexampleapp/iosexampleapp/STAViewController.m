@@ -12,7 +12,6 @@
 
 @interface STAViewController ()
 
-@property (weak, nonatomic) IBOutlet UIView* bottomContainerView;
 @property (weak, nonatomic) IBOutlet UIButton* btnFixedBannerSize;
 
 @end
@@ -45,10 +44,9 @@
     if (startAppBanner_bottom == nil) {
         startAppBanner_bottom = [[STABannerView alloc] initWithSize:STA_AutoAdSize
                                                          autoOrigin:STAAdOrigin_Bottom
-                                                           withView:self.bottomContainerView
                                                        withDelegate:nil];
         
-        [self.bottomContainerView addSubview:startAppBanner_bottom];
+        [self.view addSubview:startAppBanner_bottom];
     }
     
     /*
@@ -56,15 +54,17 @@
      */
     if (startAppBanner_fixed == nil) {
         if ( UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ) {
-            float halfX = 0.5f * (self.view.bounds.size.width - 768);
-            startAppBanner_fixed = [[STABannerView alloc] initWithSize:STA_PortraitAdSize_768x90
+            STABannerSize bannerSize = STA_PortraitAdSize_768x90;
+            CGFloat halfX = (self.view.bounds.size.width - bannerSize.size.width) / 2.0f;
+            startAppBanner_fixed = [[STABannerView alloc] initWithSize:bannerSize
                                                                 origin:CGPointMake(halfX, 350)
-                                                              withView:self.view withDelegate:nil];
+                                                          withDelegate:nil];
         } else {
-            float halfX = 0.5f * (self.view.bounds.size.width - 320);
-            startAppBanner_fixed = [[STABannerView alloc] initWithSize:STA_PortraitAdSize_320x50
-                                                                origin:CGPointMake(halfX, 160)
-                                                              withView:self.view withDelegate:nil];
+            STABannerSize bannerSize = STA_PortraitAdSize_320x50;
+            CGFloat halfX = (self.view.bounds.size.width - bannerSize.size.width) / 2.0f;
+            startAppBanner_fixed = [[STABannerView alloc] initWithSize:bannerSize
+                                                                origin:CGPointMake(halfX, 150)
+                                                          withDelegate:nil];
         }
         
         [self.view addSubview:startAppBanner_fixed];
@@ -88,10 +88,7 @@
 }
 
 - (void)writePersonalizedAdsConsent:(BOOL)isGranted {
-    [[STAStartAppSDK sharedInstance]
-        setUserConsent:isGranted
-        forConsentType:@"pas"
-        withTimestamp:[[NSDate date] timeIntervalSince1970]];
+    [[STAStartAppSDK sharedInstance] setUserConsent:isGranted forConsentType:@"pas" withTimestamp:[[NSDate date] timeIntervalSince1970]];
     
     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"gdpr_dialog_was_shown"];
 }
@@ -128,9 +125,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.btnFixedBannerSize
-        setTitle:UIDevice.currentDevice.userInterfaceIdiom == UIUserInterfaceIdiomPad ? @"768x90" : @"320x50"
-        forState:UIControlStateNormal];
+    [self.btnFixedBannerSize setTitle:UIDevice.currentDevice.userInterfaceIdiom == UIUserInterfaceIdiomPad ? @"768x90" : @"320x50" forState:UIControlStateNormal];
     
     [self initStartAppSdkIfGdprShown];
     
@@ -145,13 +140,6 @@
     [super viewDidAppear:animated];
     
     [self initStartAppSdkIfGdprNotShown];
-}
-
-- (void)viewWillTransitionToSize:(CGSize)size
-       withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
-    
-    [startAppBanner_bottom viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
-    [startAppBanner_fixed viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
 }
 
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations {

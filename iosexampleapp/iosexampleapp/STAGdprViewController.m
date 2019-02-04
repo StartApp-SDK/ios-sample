@@ -3,7 +3,7 @@
 //  iosexampleapp
 //
 //  Created by tto on 11/5/18.
-//  Copyright © 2018 StartApp. All rights reserved.
+//  Copyright (c) 2014 StartApp. All rights reserved.
 //
 
 #import "STAGdprViewController.h"

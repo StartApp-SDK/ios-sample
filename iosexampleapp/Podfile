@@ -1,0 +1,7 @@
+platform :ios, '6.0'
+
+target 'iosexampleapp' do
+
+  pod 'StartAppSDK'
+
+end
