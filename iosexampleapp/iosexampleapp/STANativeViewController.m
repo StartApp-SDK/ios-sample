@@ -31,7 +31,8 @@
     STANativeAdPreferences *pref = [[STANativeAdPreferences alloc]init];
     pref.adsNumber = 10; // Request 10
     pref.autoBitmapDownload = YES; // Do not download image
-    pref.bitmapSize = SIZE_100X100;
+    pref.primaryImageSize = SIZE_150X150;
+    pref.secondaryImageSize = SIZE_100X100;
     [startAppNativeAd loadAdWithDelegate:self withNativeAdPreferences:pref];
 }
 
