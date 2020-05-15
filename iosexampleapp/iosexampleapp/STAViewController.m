@@ -7,8 +7,6 @@
 //
 
 #import "STAViewController.h"
-#import "STAGdprViewController.h"
-
 
 @interface STAViewController ()
 
@@ -87,39 +85,9 @@
     [sdk showSplashAdWithPreferences:splashPreferences];
 }
 
-- (void)writePersonalizedAdsConsent:(BOOL)isGranted {
-    [[STAStartAppSDK sharedInstance] setUserConsent:isGranted forConsentType:@"pas" withTimestamp:[[NSDate date] timeIntervalSince1970]];
-    
-    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"gdpr_dialog_was_shown"];
-}
-
-- (void)initStartAppSdkIfGdprShown {
-    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"gdpr_dialog_was_shown"]) {
-        return;
-    }
-    
+- (void)initStartAppSdk {
     [self initStartAppSDK];
     [self showSplashAd];
-}
-
-- (void)initStartAppSdkIfGdprNotShown {
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"gdpr_dialog_was_shown"]) {
-        return;
-    }
-    
-    [self performSegueWithIdentifier:@"showGdprSegue" sender:nil];
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue*)segue sender:(id)sender {
-    STAGdprViewController* dst = segue.destinationViewController;
-    if (![dst isMemberOfClass:[STAGdprViewController class]]) {
-        return;
-    }
-    
-    dst.completionHandler = ^(BOOL isGranted) {
-        [self initStartAppSDK];
-        [self writePersonalizedAdsConsent:isGranted];
-    };
 }
 
 - (void)viewDidLoad {
@@ -127,19 +95,13 @@
     
     [self.btnFixedBannerSize setTitle:UIDevice.currentDevice.userInterfaceIdiom == UIUserInterfaceIdiomPad ? @"768x90" : @"320x50" forState:UIControlStateNormal];
     
-    [self initStartAppSdkIfGdprShown];
+    [self initStartAppSdk];
     
     /*
      Init of the startapp interstitials
      */
     startAppAd_autoLoad = [[STAStartAppAd alloc] init];
     startAppAd_loadShow = [[STAStartAppAd alloc] init];
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    
-    [self initStartAppSdkIfGdprNotShown];
 }
 
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations {

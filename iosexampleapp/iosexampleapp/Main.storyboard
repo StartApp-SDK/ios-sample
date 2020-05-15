@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,7 +13,7 @@
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="STAViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mhd-Cp-4hz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1XU-AJ-3n6">
@@ -95,17 +93,9 @@
                                     <action selector="btnCoverBannerSizeClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ZAf-zG-1pc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2sp-e9-iYt">
-                                <rect key="frame" x="121.5" y="134" width="171" height="30"/>
-                                <state key="normal" title="Personalized Ads Setting"/>
-                                <connections>
-                                    <segue destination="1bd-QZ-Eti" kind="presentation" id="CRc-9r-12w"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Olu-ai-KTN" firstAttribute="top" secondItem="2sp-e9-iYt" secondAttribute="bottom" constant="60" id="0We-pv-WZF"/>
                             <constraint firstItem="yQ4-op-ce8" firstAttribute="top" secondItem="Olu-ai-KTN" secondAttribute="bottom" constant="5" id="CkA-r3-KDE"/>
                             <constraint firstItem="NxE-cC-uAC" firstAttribute="centerX" secondItem="RJA-ma-1e9" secondAttribute="centerX" id="L6K-xX-1Fy"/>
                             <constraint firstItem="Olu-ai-KTN" firstAttribute="centerX" secondItem="RJA-ma-1e9" secondAttribute="centerX" id="Nzc-ar-tel"/>
@@ -114,10 +104,9 @@
                             <constraint firstItem="1XU-AJ-3n6" firstAttribute="centerX" secondItem="RJA-ma-1e9" secondAttribute="centerX" id="Wsc-in-cRw"/>
                             <constraint firstItem="Nh8-F6-4Vd" firstAttribute="centerX" secondItem="RJA-ma-1e9" secondAttribute="centerX" constant="-40" id="XCa-lq-PsH"/>
                             <constraint firstItem="NxE-cC-uAC" firstAttribute="top" secondItem="1XU-AJ-3n6" secondAttribute="bottom" id="ZtR-No-Prm"/>
+                            <constraint firstItem="Olu-ai-KTN" firstAttribute="top" secondItem="NxE-cC-uAC" secondAttribute="bottom" constant="90" id="cKF-wk-GZj"/>
                             <constraint firstItem="M0w-LD-8NH" firstAttribute="top" secondItem="Olu-ai-KTN" secondAttribute="bottom" constant="5" id="cfp-7m-mgw"/>
-                            <constraint firstItem="2sp-e9-iYt" firstAttribute="centerX" secondItem="mhd-Cp-4hz" secondAttribute="centerX" id="eSh-s5-bk2"/>
                             <constraint firstItem="eLs-dR-4fq" firstAttribute="top" secondItem="Olu-ai-KTN" secondAttribute="bottom" constant="5" id="fuN-xj-wqQ"/>
-                            <constraint firstItem="2sp-e9-iYt" firstAttribute="top" secondItem="NxE-cC-uAC" secondAttribute="bottom" id="gNw-69-xRi"/>
                             <constraint firstItem="Nh8-F6-4Vd" firstAttribute="top" secondItem="Olu-ai-KTN" secondAttribute="bottom" constant="5" id="hdd-N4-8g5"/>
                             <constraint firstItem="yQ4-op-ce8" firstAttribute="leading" secondItem="eLs-dR-4fq" secondAttribute="trailing" constant="5" id="oeX-bW-5AJ"/>
                             <constraint firstItem="Vpn-oI-9vO" firstAttribute="centerX" secondItem="RJA-ma-1e9" secondAttribute="centerX" id="wjo-At-ppD"/>
@@ -129,7 +118,6 @@
                     <navigationItem key="navigationItem" title="Example App" id="Lyz-Dw-udJ"/>
                     <connections>
                         <outlet property="btnFixedBannerSize" destination="Nh8-F6-4Vd" id="Yq2-TE-UOr"/>
-                        <segue destination="1bd-QZ-Eti" kind="presentation" identifier="showGdprSegue" id="Cqo-7R-Rys"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -147,11 +135,11 @@
             <objects>
                 <viewController id="ibo-DS-Ehc" customClass="STANativeViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Z7-hc-edu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H6w-9f-yg2">
-                                <rect key="frame" x="24" y="44" width="39" height="30"/>
+                                <rect key="frame" x="24" y="0.0" width="39" height="30"/>
                                 <state key="normal" title="Close">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -160,7 +148,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Bh-hc-vYW">
-                                <rect key="frame" x="334" y="44" width="56" height="30"/>
+                                <rect key="frame" x="334" y="0.0" width="56" height="30"/>
                                 <state key="normal" title="Load Ad">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -169,7 +157,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lH8-FF-Oo2">
-                                <rect key="frame" x="0.0" y="90" width="414" height="772"/>
+                                <rect key="frame" x="0.0" y="46" width="414" height="670"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="dataSource" destination="ibo-DS-Ehc" id="h0p-N4-X0y"/>
@@ -199,140 +187,5 @@
             </objects>
             <point key="canvasLocation" x="1742.0289855072467" y="81.026785714285708"/>
         </scene>
-        <!--Gdpr View Controller-->
-        <scene sceneID="whT-oA-3r7">
-            <objects>
-                <viewController id="1bd-QZ-Eti" customClass="STAGdprViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="MxG-L5-vcc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WZb-eL-8DR">
-                                <rect key="frame" x="24" y="785" width="366" height="53"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="No Thanks">
-                                            <attributes>
-                                                <color key="NSColor" red="0.12156862745098039" green="0.87058823529411766" blue="0.39215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" metaFont="system" size="20"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="6" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <connections>
-                                    <action selector="onCancelPressed:" destination="1bd-QZ-Eti" eventType="touchUpInside" id="kqL-Ua-5Wu"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1HT-Uy-Wff">
-                                <rect key="frame" x="24" y="727" width="366" height="53"/>
-                                <color key="backgroundColor" red="0.1215686275" green="0.87058823529999996" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Continue">
-                                            <attributes>
-                                                <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" metaFont="system" size="20"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="6" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="onOkPressed:" destination="1bd-QZ-Eti" eventType="touchUpInside" id="LNM-Yl-uA6"/>
-                                </connections>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBw-Qu-vTX">
-                                <rect key="frame" x="24" y="272" width="366" height="425"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <attributedString key="attributedText">
-                                    <fragment>
-                                        <string key="content">This app uses StartApp to enable/provide you with a personalized advertising experience. By clicking, ‘continue’ you agree to share your personal data on StartApp’s Network and its Business Partners and agree to the StartApp privacy policy in order to allow StartApp and its Partners to provide you with relevant ads.</string>
-                                        <attributes>
-                                            <color key="NSColor" red="0.38431372549019605" green="0.38431372549019605" blue="0.38431372549019605" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" metaFont="system" size="20"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.3" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <attributedString key="attributedText">
-                                        <fragment>
-                                            <string key="content">This app uses StartApp to enable/provide you with a personalized advertising experience. By clicking, ‘continue’ you agree to share your personal data on StartApp’s Network and its Business Partners and agree to the StartApp privacy policy in order to allow StartApp and its Partners to provide you with relevant ads.</string>
-                                            <attributes>
-                                                <color key="NSColor" red="0.38431372549019605" green="0.38431372549019605" blue="0.38431372549019605" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" metaFont="system" size="43"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.3" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </variation>
-                            </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_bar" translatesAutoresizingMaskIntoConstraints="NO" id="krJ-s5-pSZ">
-                                <rect key="frame" x="0.0" y="44" width="414" height="88"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UXg-Ch-mO9">
-                                <rect key="frame" x="24" y="172" width="366" height="70"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Would like us to present you with personalized ads?">
-                                        <attributes>
-                                            <font key="NSFont" metaFont="system" size="23"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.3" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <attributedString key="attributedText">
-                                        <fragment content="Would like us to present you with personalized ads?">
-                                            <attributes>
-                                                <font key="NSFont" metaFont="system" size="50"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.3" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </variation>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="krJ-s5-pSZ" firstAttribute="leading" secondItem="Sqx-DO-4wA" secondAttribute="leading" id="2Rl-Xa-4Em"/>
-                            <constraint firstItem="krJ-s5-pSZ" firstAttribute="top" secondItem="Sqx-DO-4wA" secondAttribute="top" id="4xs-ZY-qJ1"/>
-                            <constraint firstItem="1HT-Uy-Wff" firstAttribute="leading" secondItem="Sqx-DO-4wA" secondAttribute="leading" constant="24" id="6ab-md-UgW"/>
-                            <constraint firstItem="UXg-Ch-mO9" firstAttribute="leading" secondItem="Sqx-DO-4wA" secondAttribute="leading" constant="24" id="CNe-2k-U6X"/>
-                            <constraint firstItem="Sqx-DO-4wA" firstAttribute="bottom" secondItem="WZb-eL-8DR" secondAttribute="bottom" constant="24" id="Hb1-3Q-JlX"/>
-                            <constraint firstItem="Sqx-DO-4wA" firstAttribute="trailing" secondItem="WZb-eL-8DR" secondAttribute="trailing" constant="24" id="KK9-ED-O4k"/>
-                            <constraint firstItem="WZb-eL-8DR" firstAttribute="leading" secondItem="Sqx-DO-4wA" secondAttribute="leading" constant="24" id="Qgi-du-XpD"/>
-                            <constraint firstItem="1HT-Uy-Wff" firstAttribute="top" secondItem="uBw-Qu-vTX" secondAttribute="bottom" constant="30" id="Uu0-y4-JMe"/>
-                            <constraint firstItem="Sqx-DO-4wA" firstAttribute="trailing" secondItem="krJ-s5-pSZ" secondAttribute="trailing" id="V4s-MU-eE6"/>
-                            <constraint firstItem="WZb-eL-8DR" firstAttribute="top" secondItem="1HT-Uy-Wff" secondAttribute="bottom" constant="5" id="Voz-LF-DBd"/>
-                            <constraint firstItem="Sqx-DO-4wA" firstAttribute="trailing" secondItem="uBw-Qu-vTX" secondAttribute="trailing" constant="24" id="bRJ-Sj-5LC"/>
-                            <constraint firstItem="Sqx-DO-4wA" firstAttribute="trailing" secondItem="1HT-Uy-Wff" secondAttribute="trailing" constant="24" id="bml-gR-6C4"/>
-                            <constraint firstAttribute="trailing" secondItem="UXg-Ch-mO9" secondAttribute="trailing" constant="24" id="d2c-iW-K4N"/>
-                            <constraint firstItem="UXg-Ch-mO9" firstAttribute="top" secondItem="krJ-s5-pSZ" secondAttribute="bottom" constant="40" id="duE-cl-Dy1">
-                                <variation key="heightClass=regular-widthClass=regular" constant="130"/>
-                            </constraint>
-                            <constraint firstItem="uBw-Qu-vTX" firstAttribute="leading" secondItem="Sqx-DO-4wA" secondAttribute="leading" constant="24" id="rLb-Yo-2qw"/>
-                            <constraint firstItem="uBw-Qu-vTX" firstAttribute="top" secondItem="UXg-Ch-mO9" secondAttribute="bottom" constant="30" id="sgP-fy-MrC"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="Sqx-DO-4wA"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sno-xn-38Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1742" y="-634"/>
-        </scene>
     </scenes>
-    <resources>
-        <image name="app_bar" width="361" height="88"/>
-    </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="CRc-9r-12w"/>
-    </inferredMetricsTieBreakers>
 </document>

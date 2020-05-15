@@ -15,7 +15,6 @@
 		49329C76219070A800069B07 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49329C75219070A800069B07 /* StoreKit.framework */; };
 		49329C7A2190898A00069B07 /* gotham_medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49329C782190898A00069B07 /* gotham_medium.ttf */; };
 		49329C7B2190898A00069B07 /* gotham_book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49329C792190898A00069B07 /* gotham_book.ttf */; };
-		49329C7E21908AE400069B07 /* STAGdprViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49329C7D21908AE400069B07 /* STAGdprViewController.m */; };
 		4A149BE02AC6A7831DB6D786 /* libPods-iosexampleapp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16615BA65E11A3A994F83516 /* libPods-iosexampleapp.a */; };
 		50CFD3C61A277508000790CA /* STANativeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50CFD3C51A277508000790CA /* STANativeViewController.m */; };
 		88F5AAD318B4AC560006D578 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 88F5AAD118B4AC560006D578 /* InfoPlist.strings */; };
@@ -37,8 +36,6 @@
 		49329C75219070A800069B07 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		49329C782190898A00069B07 /* gotham_medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gotham_medium.ttf; sourceTree = "<group>"; };
 		49329C792190898A00069B07 /* gotham_book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gotham_book.ttf; sourceTree = "<group>"; };
-		49329C7C21908AE400069B07 /* STAGdprViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STAGdprViewController.h; sourceTree = "<group>"; };
-		49329C7D21908AE400069B07 /* STAGdprViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STAGdprViewController.m; sourceTree = "<group>"; };
 		50CFD3C41A277508000790CA /* STANativeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STANativeViewController.h; sourceTree = "<group>"; };
 		50CFD3C51A277508000790CA /* STANativeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STANativeViewController.m; sourceTree = "<group>"; };
 		88F5AAC518B4AC560006D578 /* iosexampleapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosexampleapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,8 +117,6 @@
 				50CFD3C51A277508000790CA /* STANativeViewController.m */,
 				88F5AAE018B4AC560006D578 /* STAViewController.h */,
 				88F5AAE118B4AC560006D578 /* STAViewController.m */,
-				49329C7C21908AE400069B07 /* STAGdprViewController.h */,
-				49329C7D21908AE400069B07 /* STAGdprViewController.m */,
 				3E9EDCE0208790AA0066C4E0 /* Main.storyboard */,
 				49329C61219041D600069B07 /* LaunchScreen.storyboard */,
 				88F5AAE318B4AC560006D578 /* Images.xcassets */,
@@ -278,7 +273,6 @@
 				88F5AAD518B4AC560006D578 /* main.m in Sources */,
 				88F5AAD918B4AC560006D578 /* STAAppDelegate.m in Sources */,
 				50CFD3C61A277508000790CA /* STANativeViewController.m in Sources */,
-				49329C7E21908AE400069B07 /* STAGdprViewController.m in Sources */,
 				88F5AAE218B4AC560006D578 /* STAViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
