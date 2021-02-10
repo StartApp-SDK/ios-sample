@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3E9EDCE1208790AA0066C4E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E9EDCE0208790AA0066C4E0 /* Main.storyboard */; };
+		491E662925D4604700E26851 /* AppTrackingTransparency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 491E662825D4604700E26851 /* AppTrackingTransparency.framework */; };
+		491E662D25D4636B00E26851 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 491E662B25D462C500E26851 /* libz.tbd */; };
 		49329C62219041D600069B07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49329C61219041D600069B07 /* LaunchScreen.storyboard */; };
 		49329C702190701100069B07 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49329C6F2190701100069B07 /* SystemConfiguration.framework */; };
 		49329C722190706900069B07 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49329C712190706900069B07 /* CoreTelephony.framework */; };
@@ -28,6 +30,8 @@
 		16615BA65E11A3A994F83516 /* libPods-iosexampleapp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iosexampleapp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C853A31CA0260E3F2DA6982 /* Pods-iosexampleapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosexampleapp.debug.xcconfig"; path = "Target Support Files/Pods-iosexampleapp/Pods-iosexampleapp.debug.xcconfig"; sourceTree = "<group>"; };
 		3E9EDCE0208790AA0066C4E0 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		491E662825D4604700E26851 /* AppTrackingTransparency.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppTrackingTransparency.framework; path = System/Library/Frameworks/AppTrackingTransparency.framework; sourceTree = SDKROOT; };
+		491E662B25D462C500E26851 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		49329C61219041D600069B07 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49329C632190685A00069B07 /* iosexampleapp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iosexampleapp.entitlements; sourceTree = "<group>"; };
 		49329C6F2190701100069B07 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -57,9 +61,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				49329C76219070A800069B07 /* StoreKit.framework in Frameworks */,
+				491E662D25D4636B00E26851 /* libz.tbd in Frameworks */,
 				49329C742190708500069B07 /* AdSupport.framework in Frameworks */,
 				49329C722190706900069B07 /* CoreTelephony.framework in Frameworks */,
 				49329C702190701100069B07 /* SystemConfiguration.framework in Frameworks */,
+				491E662925D4604700E26851 /* AppTrackingTransparency.framework in Frameworks */,
 				4A149BE02AC6A7831DB6D786 /* libPods-iosexampleapp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -70,6 +76,8 @@
 		49329C6721906B8A00069B07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				491E662B25D462C500E26851 /* libz.tbd */,
+				491E662825D4604700E26851 /* AppTrackingTransparency.framework */,
 				49329C75219070A800069B07 /* StoreKit.framework */,
 				49329C732190708400069B07 /* AdSupport.framework */,
 				49329C712190706900069B07 /* CoreTelephony.framework */,
@@ -156,7 +164,6 @@
 				88F5AAC118B4AC560006D578 /* Sources */,
 				88F5AAC218B4AC560006D578 /* Frameworks */,
 				88F5AAC318B4AC560006D578 /* Resources */,
-				7C48F58E36AD162A431411F5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -243,24 +250,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7C48F58E36AD162A431411F5 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-iosexampleapp/Pods-iosexampleapp-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/StartAppSDK/StartAppSDK.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/StartAppSDK.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iosexampleapp/Pods-iosexampleapp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

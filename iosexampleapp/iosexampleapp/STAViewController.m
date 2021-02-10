@@ -29,8 +29,8 @@
         return;
     }
     
-    sdk.appID = @"yourAppId";
-    sdk.devID = @"yourDeveloperId";
+    sdk.appID = @"203834832"; // your app id, you must copy it from your account on start.io portal
+    sdk.devID = @"yourDeveloperId"; // optional
     sdk.preferences = [STASDKPreferences prefrencesWithAge:22 andGender:STAGender_Male];
     
     // loading the StartApp Ad
