@@ -28,6 +28,12 @@
     STAStartAppAd* startAppAd_loadShow;
     
     /*
+     Declaration of STAStartAppAd which later on will be used
+     for loading rewarded video ad
+     */
+    STAStartAppAd* startAppAd_rewardedVideo;
+    
+    /*
      Declaration of StartApp Banner view with variable size and bottom positioning
      */
     STABannerView* startAppBanner_bottom;

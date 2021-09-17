@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
-    <device id="retina5_5" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,29 +13,32 @@
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="STAViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mhd-Cp-4hz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1XU-AJ-3n6">
-                                <rect key="frame" x="104" y="74" width="206" height="30"/>
-                                <state key="normal" title="Load &amp; Show (using delegate)">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1XU-AJ-3n6">
+                                <rect key="frame" x="93" y="55" width="189" height="30"/>
+                                <state key="normal" title="Interstitial Ad (load &amp; show)">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                    </preferredSymbolConfiguration>
                                 </state>
                                 <connections>
                                     <action selector="btnLoadShowClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ViG-rp-rZ9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vpn-oI-9vO">
-                                <rect key="frame" x="126" y="44" width="162" height="30"/>
-                                <state key="normal" title="Show Ad (recomended)">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vpn-oI-9vO">
+                                <rect key="frame" x="80.5" y="25" width="214" height="30"/>
+                                <state key="normal" title="Interstitial Ad (show preloaded)">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="btnShowAdClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ggO-bu-XDn"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NxE-cC-uAC">
-                                <rect key="frame" x="139" y="104" width="136" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NxE-cC-uAC">
+                                <rect key="frame" x="119.5" y="85" width="136" height="30"/>
                                 <state key="normal" title="Native Ads Example">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -43,14 +46,23 @@
                                     <segue destination="ibo-DS-Ehc" kind="presentation" id="DpN-py-sNw"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gt8-pu-sQ9">
+                                <rect key="frame" x="71" y="115" width="233" height="30"/>
+                                <state key="normal" title="Rewarded Video Ad (load &amp; show)">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnRewardedVideoAdClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="bde-SF-sG8"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Banner size:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Olu-ai-KTN">
-                                <rect key="frame" x="154" y="224" width="106" height="24"/>
+                                <rect key="frame" x="134" y="205" width="107" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M0w-LD-8NH">
-                                <rect key="frame" x="62" y="253" width="60" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M0w-LD-8NH">
+                                <rect key="frame" x="42.5" y="234" width="60" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="FsP-YY-0pD"/>
                                     <constraint firstAttribute="height" constant="30" id="fxX-5Y-2RX"/>
@@ -60,8 +72,8 @@
                                     <action selector="btnAutoBannerSizeClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="vsg-t6-bCp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nh8-F6-4Vd">
-                                <rect key="frame" x="127" y="253" width="80" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nh8-F6-4Vd">
+                                <rect key="frame" x="107.5" y="234" width="80" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="51l-6P-U8h"/>
                                     <constraint firstAttribute="height" constant="30" id="rsg-Kh-eMe"/>
@@ -71,8 +83,8 @@
                                     <action selector="btn320x50BannerSizeClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="wY0-oY-dd9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLs-dR-4fq">
-                                <rect key="frame" x="212" y="253" width="70" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLs-dR-4fq">
+                                <rect key="frame" x="192.5" y="234" width="70" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="0Z9-Vs-VM4"/>
                                     <constraint firstAttribute="width" constant="70" id="KRN-RQ-LmI"/>
@@ -82,8 +94,8 @@
                                     <action selector="btnMRecBannerSizeClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9Gn-It-9Oo"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQ4-op-ce8">
-                                <rect key="frame" x="287" y="253" width="70" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQ4-op-ce8">
+                                <rect key="frame" x="267.5" y="234" width="70" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="4hS-jA-LPn"/>
                                     <constraint firstAttribute="height" constant="30" id="VgS-hW-ZUm"/>
@@ -94,8 +106,10 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="RJA-ma-1e9"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Gt8-pu-sQ9" firstAttribute="top" secondItem="NxE-cC-uAC" secondAttribute="bottom" id="2Ez-Lp-1uu"/>
                             <constraint firstItem="yQ4-op-ce8" firstAttribute="top" secondItem="Olu-ai-KTN" secondAttribute="bottom" constant="5" id="CkA-r3-KDE"/>
                             <constraint firstItem="NxE-cC-uAC" firstAttribute="centerX" secondItem="RJA-ma-1e9" secondAttribute="centerX" id="L6K-xX-1Fy"/>
                             <constraint firstItem="Olu-ai-KTN" firstAttribute="centerX" secondItem="RJA-ma-1e9" secondAttribute="centerX" id="Nzc-ar-tel"/>
@@ -104,16 +118,16 @@
                             <constraint firstItem="1XU-AJ-3n6" firstAttribute="centerX" secondItem="RJA-ma-1e9" secondAttribute="centerX" id="Wsc-in-cRw"/>
                             <constraint firstItem="Nh8-F6-4Vd" firstAttribute="centerX" secondItem="RJA-ma-1e9" secondAttribute="centerX" constant="-40" id="XCa-lq-PsH"/>
                             <constraint firstItem="NxE-cC-uAC" firstAttribute="top" secondItem="1XU-AJ-3n6" secondAttribute="bottom" id="ZtR-No-Prm"/>
-                            <constraint firstItem="Olu-ai-KTN" firstAttribute="top" secondItem="NxE-cC-uAC" secondAttribute="bottom" constant="90" id="cKF-wk-GZj"/>
                             <constraint firstItem="M0w-LD-8NH" firstAttribute="top" secondItem="Olu-ai-KTN" secondAttribute="bottom" constant="5" id="cfp-7m-mgw"/>
                             <constraint firstItem="eLs-dR-4fq" firstAttribute="top" secondItem="Olu-ai-KTN" secondAttribute="bottom" constant="5" id="fuN-xj-wqQ"/>
                             <constraint firstItem="Nh8-F6-4Vd" firstAttribute="top" secondItem="Olu-ai-KTN" secondAttribute="bottom" constant="5" id="hdd-N4-8g5"/>
+                            <constraint firstItem="Olu-ai-KTN" firstAttribute="top" secondItem="Gt8-pu-sQ9" secondAttribute="bottom" constant="60" id="mc7-7K-FUS"/>
                             <constraint firstItem="yQ4-op-ce8" firstAttribute="leading" secondItem="eLs-dR-4fq" secondAttribute="trailing" constant="5" id="oeX-bW-5AJ"/>
+                            <constraint firstItem="Gt8-pu-sQ9" firstAttribute="centerX" secondItem="RJA-ma-1e9" secondAttribute="centerX" id="sfL-b6-THX"/>
                             <constraint firstItem="Vpn-oI-9vO" firstAttribute="centerX" secondItem="RJA-ma-1e9" secondAttribute="centerX" id="wjo-At-ppD"/>
-                            <constraint firstItem="Vpn-oI-9vO" firstAttribute="top" secondItem="mhd-Cp-4hz" secondAttribute="top" constant="44" id="wnm-AH-Tgt"/>
+                            <constraint firstItem="Vpn-oI-9vO" firstAttribute="top" secondItem="mhd-Cp-4hz" secondAttribute="top" constant="25" id="wnm-AH-Tgt"/>
                             <constraint firstItem="eLs-dR-4fq" firstAttribute="centerX" secondItem="RJA-ma-1e9" secondAttribute="centerX" constant="40" id="zhF-JO-CGn"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="RJA-ma-1e9"/>
                     </view>
                     <navigationItem key="navigationItem" title="Example App" id="Lyz-Dw-udJ"/>
                     <connections>
@@ -124,8 +138,8 @@
                 <containerView contentMode="scaleToFill" id="aoR-eA-2aw">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <viewLayoutGuide key="safeArea" id="XBY-JH-8aB"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </containerView>
             </objects>
             <point key="canvasLocation" x="542.60869565217399" y="81.923324052259588"/>
@@ -135,10 +149,10 @@
             <objects>
                 <viewController id="ibo-DS-Ehc" customClass="STANativeViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Z7-hc-edu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H6w-9f-yg2">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H6w-9f-yg2">
                                 <rect key="frame" x="24" y="0.0" width="39" height="30"/>
                                 <state key="normal" title="Close">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -147,8 +161,8 @@
                                     <action selector="dismiss:" destination="ibo-DS-Ehc" eventType="touchUpInside" id="Xlw-D5-FOb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Bh-hc-vYW">
-                                <rect key="frame" x="334" y="0.0" width="56" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Bh-hc-vYW">
+                                <rect key="frame" x="295" y="0.0" width="56" height="30"/>
                                 <state key="normal" title="Load Ad">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -157,7 +171,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lH8-FF-Oo2">
-                                <rect key="frame" x="0.0" y="46" width="414" height="670"/>
+                                <rect key="frame" x="0.0" y="46" width="375" height="601"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="dataSource" destination="ibo-DS-Ehc" id="h0p-N4-X0y"/>
@@ -165,6 +179,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="OKh-bi-zL3"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="H6w-9f-yg2" firstAttribute="leading" secondItem="OKh-bi-zL3" secondAttribute="leading" constant="24" id="9ze-3D-en5"/>
@@ -176,7 +191,6 @@
                             <constraint firstItem="4Bh-hc-vYW" firstAttribute="top" secondItem="2Z7-hc-edu" secondAttribute="topMargin" id="rsO-jE-yZR"/>
                             <constraint firstItem="lH8-FF-Oo2" firstAttribute="top" secondItem="H6w-9f-yg2" secondAttribute="bottom" constant="16" id="vSO-nH-ewM"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="OKh-bi-zL3"/>
                     </view>
                     <navigationItem key="navigationItem" title="Native Ads" id="4Rc-Ib-r3x"/>
                     <connections>

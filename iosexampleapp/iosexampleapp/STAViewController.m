@@ -29,8 +29,9 @@
         return;
     }
     
-    sdk.appID = @"203834832"; // your app id, you must copy it from your account on start.io portal
+    sdk.appID = @"yourAppId"; // your app id, you must copy it from your account on start.io portal
     sdk.devID = @"yourDeveloperId"; // optional
+    sdk.testAdsEnabled = YES;
     sdk.preferences = [STASDKPreferences prefrencesWithAge:22 andGender:STAGender_Male];
     
     // loading the StartApp Ad
@@ -95,13 +96,15 @@
     
     [self.btnFixedBannerSize setTitle:UIDevice.currentDevice.userInterfaceIdiom == UIUserInterfaceIdiomPad ? @"768x90" : @"320x50" forState:UIControlStateNormal];
     
-    [self initStartAppSdk];
-    
     /*
      Init of the startapp interstitials
      */
     startAppAd_autoLoad = [[STAStartAppAd alloc] init];
     startAppAd_loadShow = [[STAStartAppAd alloc] init];
+    startAppAd_rewardedVideo = [[STAStartAppAd alloc] init];
+    
+    [self initStartAppSdk];
+    
 }
 
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations {
@@ -152,6 +155,13 @@
     [startAppBanner_bottom setSTABannerSize:STA_CoverAdSize];
 }
 
+#pragma mark Rewarded video
+
+- (IBAction)btnRewardedVideoAdClick:(id)sender {
+    // loading rewarded video ad
+    [startAppAd_rewardedVideo loadRewardedVideoAdWithDelegate:self];
+}
+
 
 #pragma mark STADelegateProtocol methods
 /*
@@ -167,6 +177,9 @@
     // Show the Ad
     if (startAppAd_loadShow == ad) {
         [startAppAd_loadShow showAd];
+    }
+    else if (startAppAd_rewardedVideo == ad) {
+        [startAppAd_rewardedVideo showAd];
     }
 }
 
