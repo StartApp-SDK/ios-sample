@@ -17,7 +17,6 @@
 		49329C76219070A800069B07 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49329C75219070A800069B07 /* StoreKit.framework */; };
 		49329C7A2190898A00069B07 /* gotham_medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49329C782190898A00069B07 /* gotham_medium.ttf */; };
 		49329C7B2190898A00069B07 /* gotham_book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49329C792190898A00069B07 /* gotham_book.ttf */; };
-		4A149BE02AC6A7831DB6D786 /* libPods-iosexampleapp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16615BA65E11A3A994F83516 /* libPods-iosexampleapp.a */; };
 		50CFD3C61A277508000790CA /* STANativeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50CFD3C51A277508000790CA /* STANativeViewController.m */; };
 		88F5AAD318B4AC560006D578 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 88F5AAD118B4AC560006D578 /* InfoPlist.strings */; };
 		88F5AAD518B4AC560006D578 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F5AAD418B4AC560006D578 /* main.m */; };
@@ -27,8 +26,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		16615BA65E11A3A994F83516 /* libPods-iosexampleapp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iosexampleapp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1C853A31CA0260E3F2DA6982 /* Pods-iosexampleapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosexampleapp.debug.xcconfig"; path = "Target Support Files/Pods-iosexampleapp/Pods-iosexampleapp.debug.xcconfig"; sourceTree = "<group>"; };
 		3E9EDCE0208790AA0066C4E0 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		491E662825D4604700E26851 /* AppTrackingTransparency.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppTrackingTransparency.framework; path = System/Library/Frameworks/AppTrackingTransparency.framework; sourceTree = SDKROOT; };
 		491E662B25D462C500E26851 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -52,7 +49,6 @@
 		88F5AAE018B4AC560006D578 /* STAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STAViewController.h; sourceTree = "<group>"; };
 		88F5AAE118B4AC560006D578 /* STAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STAViewController.m; sourceTree = "<group>"; };
 		88F5AAE318B4AC560006D578 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		F972A60A9302FC9726122AC6 /* Pods-iosexampleapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosexampleapp.release.xcconfig"; path = "Target Support Files/Pods-iosexampleapp/Pods-iosexampleapp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +62,6 @@
 				49329C722190706900069B07 /* CoreTelephony.framework in Frameworks */,
 				49329C702190701100069B07 /* SystemConfiguration.framework in Frameworks */,
 				491E662925D4604700E26851 /* AppTrackingTransparency.framework in Frameworks */,
-				4A149BE02AC6A7831DB6D786 /* libPods-iosexampleapp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +77,6 @@
 				49329C732190708400069B07 /* AdSupport.framework */,
 				49329C712190706900069B07 /* CoreTelephony.framework */,
 				49329C6F2190701100069B07 /* SystemConfiguration.framework */,
-				16615BA65E11A3A994F83516 /* libPods-iosexampleapp.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -147,8 +141,6 @@
 		C3839E63164B1F1C7876EB93 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1C853A31CA0260E3F2DA6982 /* Pods-iosexampleapp.debug.xcconfig */,
-				F972A60A9302FC9726122AC6 /* Pods-iosexampleapp.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -160,7 +152,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 88F5AAFA18B4AC560006D578 /* Build configuration list for PBXNativeTarget "iosexampleapp" */;
 			buildPhases = (
-				5B48EC0120D83E9E50248E0A /* [CP] Check Pods Manifest.lock */,
 				88F5AAC118B4AC560006D578 /* Sources */,
 				88F5AAC218B4AC560006D578 /* Frameworks */,
 				88F5AAC318B4AC560006D578 /* Resources */,
@@ -228,31 +219,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		5B48EC0120D83E9E50248E0A /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-iosexampleapp-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		88F5AAC118B4AC560006D578 /* Sources */ = {
@@ -383,7 +349,6 @@
 		};
 		88F5AAFB18B4AC560006D578 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1C853A31CA0260E3F2DA6982 /* Pods-iosexampleapp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = iosexampleapp/iosexampleapp.entitlements;
@@ -412,7 +377,6 @@
 		};
 		88F5AAFC18B4AC560006D578 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F972A60A9302FC9726122AC6 /* Pods-iosexampleapp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = iosexampleapp/iosexampleapp.entitlements;
