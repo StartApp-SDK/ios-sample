@@ -1,5 +1,5 @@
 platform :ios, '12.0'
 
 target 'iosexampleapp' do
-	pod 'StartAppSDK', '~> 4.8.0'
+	pod 'StartAppSDK', '~> 4.10.0'
 end
